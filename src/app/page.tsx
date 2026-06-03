@@ -1,0 +1,265 @@
+import Link from "next/link";
+import {
+  Scale,
+  Globe,
+  Users,
+  Home,
+  Briefcase,
+  FileText,
+  Star,
+  ArrowRight,
+  Calendar,
+  Shield,
+  Clock,
+  Award,
+} from "lucide-react";
+
+const practiceAreas = [
+  { icon: Globe, title: "Immigration Law", desc: "Visas, permits, asylum and citizenship matters for foreign nationals in South Africa." },
+  { icon: Scale, title: "Civil Litigation", desc: "Representing clients in disputes, debt recovery, and High Court matters." },
+  { icon: Users, title: "Family Law & Divorce", desc: "Divorce, maintenance, custody, domestic violence and adoption proceedings." },
+  { icon: Home, title: "Property & Conveyancing", desc: "Transfers, bond registrations, sectional title and property disputes." },
+  { icon: Briefcase, title: "Labour & Employment", desc: "CCMA disputes, unfair dismissal, employment contracts and workplace compliance." },
+  { icon: FileText, title: "Wills, Estates & Trusts", desc: "Drafting wills, deceased estate administration and trust formation." },
+];
+
+const stats = [
+  { icon: Award, value: "LSSA", label: "Registered Members" },
+  { icon: Clock, value: "10+", label: "Years in Practice" },
+  { icon: Users, value: "500+", label: "Clients Served" },
+  { icon: Scale, value: "6", label: "Practice Areas" },
+];
+
+const testimonials = [
+  {
+    quote: "Chesire Attorneys handled my immigration matter with professionalism and care. I highly recommend them to anyone navigating the South African visa system.",
+    author: "Client — Immigration Matter",
+  },
+  {
+    quote: "The team guided me through my divorce with sensitivity and expertise. I felt supported throughout a very difficult time.",
+    author: "Client — Family Law Matter",
+  },
+  {
+    quote: "Excellent service and clear communication. My property transfer was handled efficiently and without any surprises.",
+    author: "Client — Property & Conveyancing",
+  },
+];
+
+const articles = [
+  {
+    title: "Understanding Your Rights as a Foreign National in South Africa",
+    category: "Immigration",
+    excerpt: "Navigating South African immigration law can be complex. Here is what every foreign national should know about their rights and obligations.",
+    date: "May 2026",
+  },
+  {
+    title: "What to Do If You Are Served with a Summons",
+    category: "Civil Litigation",
+    excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide.",
+    date: "April 2026",
+  },
+  {
+    title: "How to Start the Divorce Process in South Africa",
+    category: "Family Law",
+    excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs for both parties.",
+    date: "March 2026",
+  },
+];
+
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative bg-[#1A2E52] text-white overflow-hidden min-h-[85vh] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-4">
+            Boutique Law Firm — Johannesburg
+          </p>
+          <h1 className="font-[var(--font-playfair)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Expert Legal Guidance<br />
+            <span className="text-[#C9A84C]">You Can Trust</span>
+          </h1>
+          <p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            Chesire Attorneys is a boutique Johannesburg law firm delivering personalised, accessible legal services in immigration, litigation, family law and beyond.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#C9A84C] hover:bg-[#b8963e] text-[#1A2E52] font-bold px-8 py-4 rounded text-base transition-colors"
+            >
+              Book a Consultation
+            </a>
+            <Link
+              href="/services"
+              className="border border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded text-base transition-colors"
+            >
+              Our Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+          {stats.map(({ icon: Icon, value, label }) => (
+            <div key={label} className="flex flex-col items-center text-center gap-1">
+              <Icon size={24} className="text-[#C9A84C]" />
+              <p className="font-[var(--font-playfair)] text-2xl font-bold text-[#1A2E52]">{value}</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wide">{label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Practice areas */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold text-[#1A2E52] mb-3">
+            Our Practice Areas
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto">
+            Expert legal services across a range of specialisations — always with a personal, client-first approach.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {practiceAreas.map(({ icon: Icon, title, desc }) => (
+            <Link
+              key={title}
+              href="/services"
+              className="bg-white border border-gray-100 rounded-lg p-6 hover:shadow-md hover:border-[#C9A84C] transition-all group"
+            >
+              <div className="w-12 h-12 bg-[#1A2E52]/5 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#C9A84C]/10 transition-colors">
+                <Icon size={22} className="text-[#1A2E52] group-hover:text-[#C9A84C] transition-colors" />
+              </div>
+              <h3 className="font-[var(--font-playfair)] text-lg font-semibold text-[#1A2E52] mb-2">{title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
+              <span className="inline-flex items-center gap-1 text-[#C9A84C] text-sm font-medium mt-3">
+                Learn more <ArrowRight size={14} />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Team preview */}
+      <section className="bg-[#1A2E52] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold mb-3">Meet Our Team</h2>
+            <p className="text-white/70 max-w-xl mx-auto">Experienced attorneys committed to achieving the best outcomes for our clients.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            {[
+              { name: "Attorney Name", role: "Director & Founder", areas: "Immigration, Civil Litigation" },
+              { name: "Attorney Name", role: "Associate Attorney", areas: "Family Law, Estates" },
+            ].map((member, i) => (
+              <div key={i} className="text-center">
+                <div className="w-32 h-32 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center">
+                  <span className="font-[var(--font-playfair)] text-white/30 text-5xl">CA</span>
+                </div>
+                <h3 className="font-[var(--font-playfair)] text-xl font-semibold">{member.name}</h3>
+                <p className="text-[#C9A84C] text-sm font-medium">{member.role}</p>
+                <p className="text-white/60 text-sm mt-1">{member.areas}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/team" className="border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#1A2E52] font-semibold px-6 py-3 rounded transition-colors">
+              View Full Team
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold text-[#1A2E52] mb-3">
+            What Our Clients Say
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <div key={i} className="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} size={16} className="text-[#C9A84C] fill-[#C9A84C]" />
+                ))}
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-[#1A2E52] text-xs font-semibold">— {t.author}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Latest resources */}
+      <section className="bg-[#F0EEE9] py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-10">
+            <h2 className="font-[var(--font-playfair)] text-3xl font-bold text-[#1A2E52]">Latest Legal Insights</h2>
+            <Link href="/resources" className="text-[#C9A84C] font-medium text-sm hover:underline flex items-center gap-1">
+              All articles <ArrowRight size={14} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {articles.map((a, i) => (
+              <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 flex flex-col">
+                <div className="h-40 bg-[#1A2E52]/5 flex items-center justify-center">
+                  <Scale size={40} className="text-[#1A2E52]/20" />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <span className="text-[#C9A84C] text-xs font-semibold uppercase tracking-wide mb-2">{a.category}</span>
+                  <h3 className="font-[var(--font-playfair)] font-semibold text-[#1A2E52] mb-2 leading-snug">{a.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">{a.excerpt}</p>
+                  <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
+                    <span className="text-xs text-gray-400">{a.date}</span>
+                    <Link href="/resources" className="text-[#C9A84C] text-sm font-medium hover:underline">Read more</Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Booking CTA banner */}
+      <section className="bg-[#C9A84C] py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <Calendar size={36} className="text-[#1A2E52] mx-auto mb-4" />
+          <h2 className="font-[var(--font-playfair)] text-3xl font-bold text-[#1A2E52] mb-3">
+            Ready to Speak to an Attorney?
+          </h2>
+          <p className="text-[#1A2E52]/80 text-lg mb-8">
+            Book your consultation online — fast, easy and confidential.
+          </p>
+          <a
+            href={calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#1A2E52] hover:bg-[#0f1e38] text-white font-bold px-10 py-4 rounded text-base transition-colors"
+          >
+            Book Your Consultation Now
+          </a>
+        </div>
+      </section>
+
+      {/* POPIA notice */}
+      <div className="bg-[#1A2E52]/5 py-3 text-center">
+        <p className="text-xs text-gray-500 max-w-2xl mx-auto px-4">
+          <Shield size={12} className="inline mr-1" />
+          Chesire Attorneys processes personal information in accordance with the Protection of Personal Information Act (POPIA).
+        </p>
+      </div>
+    </>
+  );
+}

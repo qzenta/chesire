@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1A2E52;
+  --gold: #C9A84C;
+  --offwhite: #F9F8F6;
+  --charcoal: #2C2C2C;
+}
+
+@theme inline {
+  --color-navy: #1A2E52;
+  --color-gold: #C9A84C;
+  --color-offwhite: #F9F8F6;
+  --color-charcoal: #2C2C2C;
+}
+
+body {
+  background: var(--offwhite);
+  color: var(--charcoal);
+}
+
+html {
+  scroll-behavior: smooth;
+}
