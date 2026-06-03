@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27000000000";
@@ -9,8 +10,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div className="md:col-span-1">
-          <p className="font-[var(--font-playfair)] text-white text-lg font-bold">CHESIRE</p>
-          <p className="text-[#C9A84C] text-xs tracking-widest uppercase mb-3">ATTORNEYS</p>
+          <Image
+            src="/images/logo.png"
+            alt="Chesire Attorneys"
+            width={140}
+            height={46}
+            className="h-9 w-auto brightness-0 invert mb-3"
+          />
           <p className="text-sm leading-relaxed">
             Boutique Johannesburg law firm specialising in immigration, civil litigation, family law and more.
           </p>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -20,13 +21,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-[var(--font-playfair)] text-white text-xl font-bold tracking-wide">
-              CHESIRE
-            </span>
-            <span className="text-[#C9A84C] text-xs font-medium tracking-widest uppercase mt-1">
-              ATTORNEYS
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Chesire Attorneys"
+              width={160}
+              height={52}
+              className="h-10 w-auto brightness-0 invert"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
