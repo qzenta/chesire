@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { MapPin, Phone, Mail, MessageCircle, Calendar, Shield } from "lucide-react";
+import PageHero from "@/components/PageHero";
 
 const areaOptions = [
   "Immigration Law",
@@ -40,18 +41,7 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Page hero */}
-      <section className="bg-[#1A2E52] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-3">Contact Us</p>
-          <h1 className="font-[var(--font-playfair)] text-4xl sm:text-5xl font-bold mb-4">
-            Get in Touch
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            We are here to help. Reach out by form, phone, WhatsApp or book directly online.
-          </p>
-        </div>
-      </section>
+      <PageHero label="Contact Us" title="Get in Touch" subtitle="We are here to help. Reach out by form, phone, WhatsApp or book directly online." image="/images/contact-hero.jpg" />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Contact form */}
@@ -100,7 +90,7 @@ export default function ContactPage() {
                     value={form.phone}
                     onChange={handleChange}
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C]"
-                    placeholder="+27 (0)00 000 0000"
+                    placeholder="011 333 0389"
                   />
                 </div>
                 <div>
@@ -163,11 +153,11 @@ export default function ContactPage() {
             <ul className="space-y-4 text-sm text-gray-600">
               <li className="flex gap-3">
                 <MapPin size={18} className="text-[#C9A84C] shrink-0 mt-0.5" />
-                <span>Works@Market City Centre, Johannesburg</span>
+                <span>83 Albertina Sisulu Rd, Works@Market City Centre, Johannesburg, 2110</span>
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="text-[#C9A84C] shrink-0" />
-                <a href="tel:+27000000000" className="hover:text-[#1A2E52]">+27 (0)00 000 0000</a>
+                <a href="tel:0113330389" className="hover:text-[#1A2E52]">011 333 0389</a>
               </li>
               <li className="flex gap-3">
                 <Mail size={18} className="text-[#C9A84C] shrink-0" />

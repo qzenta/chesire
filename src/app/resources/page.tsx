@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import PageHero from "@/components/PageHero";
 import { Scale, BookOpen, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
 const featured = {
@@ -95,18 +96,7 @@ export default function ResourcesPage() {
 
   return (
     <>
-      {/* Page hero */}
-      <section className="bg-[#1A2E52] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-3">Resources</p>
-          <h1 className="font-[var(--font-playfair)] text-4xl sm:text-5xl font-bold mb-4">
-            Free Legal Information Hub
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            Plain-language guides, legal glossary and insights — helping South Africans understand their rights and navigate the legal system with confidence.
-          </p>
-        </div>
-      </section>
+      <PageHero label="Resources" title="Free Legal Information Hub" subtitle="Plain-language guides, legal glossary and insights — helping South Africans understand their rights." image="/images/resources-hero.jpg" />
 
       {/* Featured article */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

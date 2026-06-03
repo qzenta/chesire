@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Scale, Globe, Users, Home, Briefcase, FileText, ArrowRight } from "lucide-react";
+import PageHero from "@/components/PageHero";
 
 const services = [
   {
@@ -85,18 +86,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      {/* Page hero */}
-      <section className="bg-[#1A2E52] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-3">Our Services</p>
-          <h1 className="font-[var(--font-playfair)] text-4xl sm:text-5xl font-bold mb-4">
-            Expert Legal Services in Johannesburg
-          </h1>
-          <p className="text-white/70 text-lg max-w-2xl">
-            From immigration to estates, Chesire Attorneys provides practical, personalised legal advice across six core practice areas.
-          </p>
-        </div>
-      </section>
+      <PageHero label="Our Services" title="Expert Legal Services in Johannesburg" subtitle="From immigration to estates, Chesire Attorneys provides practical, personalised legal advice across six core practice areas." image="/images/services-hero.jpg" />
 
       {/* Intro */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
