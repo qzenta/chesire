@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Scale, Globe, Users, Home, Briefcase, FileText, Star, ArrowRight, Calendar, Shield } from "lucide-react";
-import DiagonalHero from "@/components/DiagonalHero";
+import HeroSlider from "@/components/HeroSlider";
 import CounterSection from "@/components/CounterSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
 
@@ -31,7 +31,7 @@ const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.co
 export default function HomePage() {
   return (
     <>
-      <DiagonalHero />
+      <HeroSlider />
 
       {/* Trust bar */}
       <section className="bg-white border-b border-gray-100 shadow-sm">
@@ -78,12 +78,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {[
               { img: "/images/team1.jpg", name: "Simon Chesire", role: "Director & Founder", areas: "Immigration, Civil Litigation, Criminal Law" },
-              { img: "/images/team2.jpg", name: "Attorney Name", role: "Associate Attorney", areas: "Family Law, Estates, Labour Law" },
+              { img: "/images/team2.jpg", name: "Respina Tafirei", role: "Professional Assistant", areas: "Family Law, Estates, Labour Law" },
             ].map((m, i) => (
-              <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm text-center">
+              <div
+                key={i}
+                className="bg-white rounded-xl overflow-hidden shadow-sm text-center group transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
+                style={{ animation: `fadeInUp 0.6s ease both`, animationDelay: `${i * 0.15}s` }}
+              >
                 <div className="h-56 bg-[#1A2E52]/5 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top" />
+                  <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-[var(--font-playfair)] text-lg font-bold text-[#1A2E52]">{m.name}</h3>

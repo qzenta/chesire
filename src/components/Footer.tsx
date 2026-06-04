@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import Wordmark from "@/components/Wordmark";
 
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27824078095";
 
@@ -11,7 +11,7 @@ export default function Footer() {
 
         {/* Brand */}
         <div>
-          <Image src="/images/logo.png" alt="Chesire Attorneys" width={140} height={46} className="h-10 w-auto brightness-0 invert mb-4" />
+          <div className="mb-4"><Wordmark inverted /></div>
           <p className="text-sm leading-relaxed mb-5">
             Boutique Johannesburg law firm delivering accessible, expert legal services across immigration, litigation, family law and beyond.
           </p>

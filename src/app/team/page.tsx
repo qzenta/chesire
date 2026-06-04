@@ -30,11 +30,15 @@ export default function TeamPage() {
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-10">
         {team.map((member, i) => (
-          <div key={i} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row">
+          <div
+            key={i}
+            className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row hover:shadow-lg transition-shadow duration-300"
+            style={{ animation: "fadeInUp 0.6s ease both", animationDelay: `${i * 0.2}s` }}
+          >
             {/* Photo — fixed width left column */}
-            <div className="md:w-64 lg:w-72 shrink-0 overflow-hidden bg-[#1A2E52]/5">
+            <div className="md:w-64 lg:w-72 shrink-0 overflow-hidden bg-[#1A2E52]/5 group">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top min-h-64" />
+              <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top min-h-64 group-hover:scale-105 transition-transform duration-500" />
             </div>
             {/* Bio — right column */}
             <div className="p-8 flex flex-col justify-center flex-1">

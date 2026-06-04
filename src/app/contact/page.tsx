@@ -18,6 +18,7 @@ const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.co
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", area: "", message: "" });
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -122,13 +123,20 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* POPIA consent */}
-              <div className="flex gap-2 items-start text-xs text-gray-500 bg-gray-50 border border-gray-100 rounded-lg p-3">
-                <Shield size={14} className="text-[#C9A84C] shrink-0 mt-0.5" />
-                <p>
-                  By submitting this form, you consent to Chesire Attorneys processing your personal information in accordance with the Protection of Personal Information Act (POPIA).
-                </p>
-              </div>
+              {/* POPIA consent checkbox */}
+              <label className="flex gap-3 items-start cursor-pointer bg-gray-50 border border-gray-200 rounded-lg p-3 hover:bg-gray-100 transition-colors">
+                <input
+                  type="checkbox"
+                  required
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  className="mt-0.5 w-4 h-4 accent-[#C9A84C] shrink-0 cursor-pointer"
+                />
+                <span className="text-xs text-gray-600 leading-relaxed">
+                  <Shield size={12} className="inline text-[#C9A84C] mr-1 mb-0.5" />
+                  I consent to Chesire Attorneys processing my personal information in accordance with the <strong>Protection of Personal Information Act (POPIA)</strong>. *
+                </span>
+              </label>
 
               {status === "error" && (
                 <p className="text-red-600 text-sm">Something went wrong. Please try again or call us directly.</p>
@@ -136,8 +144,8 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                disabled={status === "sending"}
-                className="w-full bg-[#1A2E52] hover:bg-[#0f1e38] disabled:opacity-60 text-white font-bold py-4 rounded-lg transition-colors"
+                disabled={status === "sending" || !consent}
+                className="w-full bg-[#1A2E52] hover:bg-[#0f1e38] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition-colors"
               >
                 {status === "sending" ? "Sending..." : "Send Message"}
               </button>

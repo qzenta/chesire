@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     }
 
     const payload = {
-      sender: { name: "Chesire Attorneys Website", email: "noreply@chesireattorneys.co.za" },
+      sender: { name: "Chesire Attorneys Website", email: "info@chesireattorneys.co.za" },
       to: [{ email: "info@chesireattorneys.co.za", name: "Chesire Attorneys" }],
       replyTo: { email, name },
       subject: `New Enquiry — ${area} — ${name}`,

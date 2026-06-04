@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import Wordmark from "@/components/Wordmark";
 // Submenus open on CSS hover — no JS state needed for desktop
 
 const links = [
@@ -69,16 +69,9 @@ export default function Navbar() {
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo on white */}
+            {/* Wordmark */}
             <Link href="/" className="flex items-center shrink-0">
-              <Image
-                src="/images/logo.png"
-                alt="Chesire Attorneys"
-                width={220}
-                height={72}
-                className="h-14 w-auto"
-                priority
-              />
+              <Wordmark />
             </Link>
 
             {/* Desktop nav — submenus open on CSS hover, no JS needed */}
