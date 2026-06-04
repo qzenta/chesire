@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Scale, Globe, Users, Home, Briefcase, FileText, Star, ArrowRight, Calendar, Shield } from "lucide-react";
 import DiagonalHero from "@/components/DiagonalHero";
 import CounterSection from "@/components/CounterSection";
@@ -19,9 +20,9 @@ const testimonials = [
 ];
 
 const articles = [
-  { title: "Understanding Your Rights as a Foreign National in South Africa", category: "Immigration", excerpt: "Navigating South African immigration law can be complex. Here is what every foreign national should know.", date: "May 2026" },
-  { title: "What to Do If You Are Served with a Summons", category: "Civil Litigation", excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide.", date: "April 2026" },
-  { title: "How to Start the Divorce Process in South Africa", category: "Family Law", excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs.", date: "March 2026" },
+  { title: "Understanding Your Rights as a Foreign National in South Africa", category: "Immigration", excerpt: "Navigating South African immigration law can be complex. Here is what every foreign national should know.", date: "May 2024", img: "/images/article1.jpg" },
+  { title: "What to Do If You Are Served with a Summons", category: "Civil Litigation", excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide.", date: "April 2024", img: "/images/article2.jpg" },
+  { title: "How to Start the Divorce Process in South Africa", category: "Family Law", excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs.", date: "March 2024", img: "/images/article3.jpg" },
 ];
 
 const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
@@ -124,7 +125,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {articles.map((a, i) => (
               <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 flex flex-col">
-                <div className="h-40 bg-[#1A2E52]/5 flex items-center justify-center"><Scale size={40} className="text-[#1A2E52]/20" /></div>
+                <div className="h-48 relative overflow-hidden"><Image src={a.img} alt={a.title} fill className="object-cover" /></div>
                 <div className="p-5 flex flex-col flex-1">
                   <span className="text-[#C9A84C] text-xs font-semibold uppercase tracking-wide mb-2">{a.category}</span>
                   <h3 className="font-[var(--font-playfair)] font-semibold text-[#1A2E52] mb-2 leading-snug">{a.title}</h3>
