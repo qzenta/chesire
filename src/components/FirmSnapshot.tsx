@@ -17,7 +17,7 @@ function useReveal() {
 }
 
 const highlights = [
-  { icon: Globe, label: "Immigration specialists with 20+ years of expertise" },
+  { icon: Globe, label: "Immigration specialists with 12+ years of expertise" },
   { icon: Scale, label: "High Court right of appearance — serving clients across Johannesburg and Alberton" },
   { icon: Users, label: "Wholly black-owned firm — B-BBEE Level 1 contributor" },
 ];
@@ -39,10 +39,10 @@ export default function FirmSnapshot() {
       >
         <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-4">About Our Firm</p>
         <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold text-[#1A2E52] mb-6 leading-tight">
-          Over 20 Years of Legal Excellence — Rooted in Johannesburg
+          12 Years of Legal Excellence — Rooted in Johannesburg
         </h2>
         <p className="text-gray-600 leading-relaxed mb-5 text-base">
-          Chesire Attorneys was founded by Simon Chesire in 2006, bringing an international career spanning Kenya and South Africa. From our offices at <strong className="text-[#1A2E52]">Works@Market City</strong> — steps from the Johannesburg Magistrate&apos;s Court and High Court — we deliver practical, accessible and results-driven legal services.
+          Chesire Attorneys was founded by Simon Chesire in 2016, bringing an extensive career spanning Kenya and South Africa. From our offices at <strong className="text-[#1A2E52]">Works@Market City</strong> — steps from the Johannesburg Magistrate&apos;s Court and High Court — we deliver practical, accessible and results-driven legal services.
         </p>
         <p className="text-gray-600 leading-relaxed mb-8 text-base">
           We serve individuals, families, NGOs, State Owned Enterprises and private companies. Our practice is built on referrals — the clearest testament to the trust our clients place in us.

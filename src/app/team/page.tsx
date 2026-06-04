@@ -15,7 +15,7 @@ const team = [
     role: "Director & Founder",
     quals: "LLB — Advocate (Kenya) | Attorney (South Africa)",
     areas: ["Immigration Law", "Civil Litigation", "Criminal Law", "Human Rights Law", "Personal Injury"],
-    bio: "Simon Chesire founded Chesire Attorneys in 2006 after an extensive career spanning over 20 years across Kenya and South Africa. He is a member of the Legal Practice Council (South Africa) and the Law Society of Kenya, with the right of appearance in the High Court. Simon specialises in immigration law, commercial litigation, personal injury, criminal law, human rights law, alternative dispute resolution and divorce matters.",
+    bio: "Simon Chesire founded Chesire Attorneys in 2016 after an extensive career spanning Kenya and South Africa. He is a member of the Legal Practice Council (South Africa) and the Law Society of Kenya, with the right of appearance in the High Court. Simon specialises in immigration law, commercial litigation, personal injury, criminal law, human rights law, alternative dispute resolution and divorce matters.",
     linkedin: "https://www.linkedin.com/in/chesire-attorneys-ab20aa121/",
   },
   {

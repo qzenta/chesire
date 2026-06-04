@@ -22,7 +22,7 @@ const slides = [
     tag: "Family & Commercial Law",
     heading: "Protecting What",
     highlight: "Matters Most",
-    sub: "Whether it is your family, your business or your rights — Chesire Attorneys stands with you with over 20 years of legal expertise.",
+    sub: "Whether it is your family, your business or your rights — Chesire Attorneys stands with you with 12 years of legal expertise.",
   },
 ];
 
