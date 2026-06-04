@@ -26,7 +26,7 @@ const slides = [
   },
 ];
 
-const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -86,14 +86,23 @@ export default function HeroSlider() {
             </h1>
             <p className="text-white/80 text-lg max-w-xl mb-8 leading-relaxed">{slide.sub}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#C9A84C] hover:bg-[#b8963e] text-[#1A2E52] font-bold px-8 py-4 rounded text-base transition-colors text-center"
-              >
-                Book a Consultation
-              </a>
+              {calendlyUrl ? (
+                <a
+                  href={calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#C9A84C] hover:bg-[#b8963e] text-[#1A2E52] font-bold px-8 py-4 rounded text-base transition-colors text-center"
+                >
+                  Book a Consultation
+                </a>
+              ) : (
+                <Link
+                  href="/contact"
+                  className="bg-[#C9A84C] hover:bg-[#b8963e] text-[#1A2E52] font-bold px-8 py-4 rounded text-base transition-colors text-center"
+                >
+                  Book a Consultation
+                </Link>
+              )}
               <Link
                 href="/services"
                 className="border border-white/50 hover:border-white text-white font-semibold px-8 py-4 rounded text-base transition-colors text-center"

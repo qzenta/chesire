@@ -18,49 +18,49 @@ const articles = [
     title: "What to Do If You Are Served with a Summons",
     category: "Civil Litigation",
     excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide to responding before the deadline.",
-    date: "April 2024",
+    date: "April 2026",
     img: "/images/article2.jpg",
   },
   {
     title: "How to Start the Divorce Process in South Africa",
     category: "Family Law",
     excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs for both parties.",
-    date: "March 2024",
+    date: "March 2026",
     img: "/images/article3.jpg",
   },
   {
     title: "What Every Employer Must Know About the CCMA",
     category: "Labour Law",
     excerpt: "The CCMA handles thousands of unfair dismissal and retrenchment cases every year. Here is what employers and employees need to know before a dispute reaches conciliation.",
-    date: "February 2024",
+    date: "February 2026",
     img: "/images/article-labour.jpg",
   },
   {
     title: "How to Apply for a Work Visa in South Africa: Step-by-Step",
     category: "Immigration Law",
     excerpt: "The South African work visa process is complex and time-sensitive. This guide breaks down the categories, requirements and common mistakes that lead to rejection.",
-    date: "January 2024",
+    date: "January 2026",
     img: "/images/article-immigration.jpg",
   },
   {
     title: "How to Register a Deceased Estate in South Africa",
     category: "Wills & Estates",
     excerpt: "The death of a loved one is never easy. Here is a step-by-step overview of the estate administration process from reporting to the Master to final distribution.",
-    date: "December 2023",
+    date: "December 2025",
     img: "/images/article1.jpg",
   },
   {
     title: "Protecting Your Business with a Proper Commercial Contract",
     category: "Commercial Law",
     excerpt: "Many South African businesses operate on verbal agreements or poorly drafted contracts — leaving them exposed to disputes and liability. Here is what a sound commercial contract must include.",
-    date: "November 2023",
+    date: "November 2025",
     img: "/images/article-commercial.jpg",
   },
   {
     title: "Your Rights as a Tenant Under the Rental Housing Act",
     category: "Property Law",
     excerpt: "South African tenants have strong legal protections. Know your rights before signing a lease or facing eviction.",
-    date: "October 2023",
+    date: "October 2025",
     img: "/images/article2.jpg",
   },
 ];
@@ -154,7 +154,7 @@ export default function ResourcesPage() {
                 <p className="text-gray-600 text-sm leading-relaxed flex-1">{a.excerpt}</p>
                 <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
                   <span className="text-xs text-gray-400">{a.date}</span>
-                  <Link href="/contact" className="text-[#C9A84C] text-sm font-medium hover:underline">
+                  <Link href="/resources" className="text-[#C9A84C] text-sm font-medium hover:underline">
                     Read more
                   </Link>
                 </div>

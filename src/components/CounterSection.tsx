@@ -4,9 +4,9 @@ import { Shield, Users, MessageSquare, Star } from "lucide-react";
 
 const stats = [
   { icon: Shield, end: 20, suffix: "+", label: "Years of Experience" },
-  { icon: Users, end: 157, suffix: "+", label: "Clients Served" },
+  { icon: Users, end: 500, suffix: "+", label: "Clients Served" },
   { icon: Star, end: 98, suffix: "%", label: "Client Satisfaction" },
-  { icon: MessageSquare, end: 50, suffix: "+", label: "New Cases Monthly" },
+  { icon: MessageSquare, end: 15, suffix: "+", label: "New Cases Monthly" },
 ];
 
 function useCounter(end: number, duration = 1800, active: boolean) {

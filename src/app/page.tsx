@@ -22,12 +22,12 @@ const testimonials = [
 ];
 
 const articles = [
-  { title: "Understanding Your Rights as a Foreign National in South Africa", category: "Immigration", excerpt: "Navigating South African immigration law can be complex. Here is what every foreign national should know.", date: "May 2024", img: "/images/article1.jpg" },
-  { title: "What to Do If You Are Served with a Summons", category: "Civil Litigation", excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide.", date: "April 2024", img: "/images/article2.jpg" },
-  { title: "How to Start the Divorce Process in South Africa", category: "Family Law", excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs.", date: "March 2024", img: "/images/article3.jpg" },
+  { title: "Understanding Your Rights as a Foreign National in South Africa", category: "Immigration", excerpt: "Navigating South African immigration law can be complex. Here is what every foreign national should know.", date: "May 2026", img: "/images/article1.jpg" },
+  { title: "What to Do If You Are Served with a Summons", category: "Civil Litigation", excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide.", date: "April 2026", img: "/images/article2.jpg" },
+  { title: "How to Start the Divorce Process in South Africa", category: "Family Law", excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs.", date: "March 2026", img: "/images/article3.jpg" },
 ];
 
-const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
 
 export default function HomePage() {
   return (
@@ -184,10 +184,17 @@ export default function HomePage() {
           <Calendar size={36} className="text-[#1A2E52] mx-auto mb-4" />
           <h2 className="font-[var(--font-playfair)] text-3xl font-bold text-[#1A2E52] mb-3">Ready to Speak to an Attorney?</h2>
           <p className="text-[#1A2E52]/80 text-lg mb-8">Book your consultation online — fast, easy and confidential.</p>
-          <a href={calendlyUrl} target="_blank" rel="noopener noreferrer"
-            className="inline-block bg-[#1A2E52] hover:bg-[#0f1e38] text-white font-bold px-10 py-4 rounded text-base transition-colors">
-            Book Your Consultation Now
-          </a>
+          {calendlyUrl ? (
+            <a href={calendlyUrl} target="_blank" rel="noopener noreferrer"
+              className="inline-block bg-[#1A2E52] hover:bg-[#0f1e38] text-white font-bold px-10 py-4 rounded text-base transition-colors">
+              Book Your Consultation Now
+            </a>
+          ) : (
+            <Link href="/contact"
+              className="inline-block bg-[#1A2E52] hover:bg-[#0f1e38] text-white font-bold px-10 py-4 rounded text-base transition-colors">
+              Book Your Consultation Now
+            </Link>
+          )}
         </div>
       </section>
     </>

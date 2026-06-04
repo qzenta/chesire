@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink, ArrowRight, UserPlus } from "lucide-react";
 import PageHero from "@/components/PageHero";
+
+export const metadata: Metadata = {
+  title: "Our Team | Chesire Attorneys Johannesburg",
+  description: "Meet the attorneys and professionals at Chesire Attorneys — experienced legal practitioners dedicated to client-first service in Johannesburg.",
+};
 
 const team = [
   {

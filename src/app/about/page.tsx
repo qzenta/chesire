@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, BookOpen, Heart, Eye, Target, ArrowRight, Award } from "lucide-react";
 import PageHero from "@/components/PageHero";
+
+export const metadata: Metadata = {
+  title: "About Chesire Attorneys | Boutique Johannesburg Law Firm",
+  description: "Learn about Chesire Attorneys — a boutique Johannesburg law firm founded on the principles of integrity, expertise and accessibility.",
+};
 
 const values = [
   { icon: Shield, title: "Integrity", desc: "We act with honesty and transparency in every matter we handle. Our clients trust us with their most sensitive legal issues — that trust is never taken for granted." },

@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Scale, Globe, Users, Home, Briefcase, FileText, ArrowRight, Building2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
+
+export const metadata: Metadata = {
+  title: "Legal Services | Immigration, Litigation, Family Law — Chesire Attorneys",
+  description: "Expert legal services in immigration, civil litigation, family law, property & conveyancing, labour and wills & estates from Chesire Attorneys Johannesburg.",
+};
 
 const services = [
   {
