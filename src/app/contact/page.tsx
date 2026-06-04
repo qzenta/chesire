@@ -199,10 +199,10 @@ export default function ContactPage() {
 
       {/* Google Maps */}
       <section className="border-t border-gray-100">
-        <div className="w-full h-80">
+        <div className="w-full h-96">
           <iframe
-            title="Chesire Attorneys — Works@Market City Centre, Johannesburg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5!2d28.0436!3d-26.2041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34a52!2sWorks%40Market%20City%20Centre%2C%20Johannesburg!5e0!3m2!1sen!2sza!4v1"
+            title="Chesire Attorneys — 83 Albertina Sisulu Rd, Johannesburg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.875508808861!2d28.040832315675!3d-26.20479197971617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1e09a5aa39%3A0xb9a7a39ee22c2db6!2s83+Albertina+Sisulu+Rd%2C+Johannesburg%2C+2001%2C+South+Africa!5e0!3m2!1sen!2sza!4v1717500000000"
             width="100%"
             height="100%"
             style={{ border: 0 }}
