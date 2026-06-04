@@ -105,9 +105,9 @@ export default async function ServicePage({ params }: Props) {
 
             {/* CTA card */}
             <div className="bg-[#1A2E52] rounded-xl p-6 text-white">
-              <h4 className="font-[var(--font-playfair)] text-lg font-bold mb-3">Free Initial Consultation</h4>
+              <h4 className="font-[var(--font-playfair)] text-lg font-bold mb-3">Speak to an Attorney</h4>
               <p className="text-white/70 text-sm leading-relaxed mb-5">
-                Speak to one of our attorneys about your matter — no obligation, no cost for the first consultation.
+                Contact us to discuss your matter with one of our attorneys and understand your options.
               </p>
               <Link
                 href="/contact"

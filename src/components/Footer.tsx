@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import Wordmark from "@/components/Wordmark";
 
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27834078095";
+const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27824078095";
 
 export default function Footer() {
   return (
@@ -81,11 +81,11 @@ export default function Footer() {
           <ul className="space-y-4 text-sm">
             <li className="flex gap-2.5">
               <MapPin size={15} className="text-[#C9A84C] shrink-0 mt-0.5" />
-              <span>83 Albertina Sisulu Rd, Works@Market City Centre, Johannesburg, 2110</span>
+              <span>83 Albertina Sisulu Rd, Works@Market City, Johannesburg, 2110</span>
             </li>
             <li className="flex gap-2.5">
               <Phone size={15} className="text-[#C9A84C] shrink-0" />
-              <a href="tel:0834078095" className="hover:text-[#C9A84C] transition-colors">083 407 8095</a>
+              <a href="tel:0834078095" className="hover:text-[#C9A84C] transition-colors">082 407 8095</a>
             </li>
             <li className="flex gap-2.5">
               <Mail size={15} className="text-[#C9A84C] shrink-0" />

@@ -84,7 +84,7 @@ const glossary = [
   { term: "Rule Nisi", def: "A provisional court order that becomes final unless cause is shown why it should not." },
   { term: "Sheriff", def: "An officer of the court responsible for serving legal documents and enforcing court orders." },
   { term: "Subpoena", def: "A court order compelling a witness to appear in court or produce documents." },
-  { term: "Tort", def: "A civil wrong (called a delict in South Africa) that causes harm and gives rise to a legal claim." },
+  { term: "Delict", def: "A civil wrong that causes harm and gives rise to a legal claim for damages. The South African equivalent of what other legal systems call a tort." },
   { term: "Vicarious Liability", def: "The legal responsibility of an employer for the unlawful acts of employees committed in the course of employment." },
 ];
 

@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div>
           <h2 className="font-[var(--font-playfair)] text-3xl font-bold text-[#1A2E52] mb-6">Our Story</h2>
           <div className="space-y-4 text-gray-600 leading-relaxed">
-            <p>Chesire Attorneys was founded by <strong className="text-[#1A2E52]">Simon Chesire</strong> in 2006, bringing over 20 years of international legal experience spanning Kenya and South Africa. From our offices at Works@Market City Centre on Albertina Sisulu Road — a modern building within walking distance of both the Magistrate&apos;s Court and the High Court in Johannesburg — we have built a reputation for thoroughness, integrity and genuine client care.</p>
+            <p>Chesire Attorneys was founded by <strong className="text-[#1A2E52]">Simon Chesire</strong> in 2006, bringing over 20 years of international legal experience spanning Kenya and South Africa. From our offices at Works@Market City on Albertina Sisulu Road — a modern building within walking distance of both the Magistrate&apos;s Court and the High Court in Johannesburg — we have built a reputation for thoroughness, integrity and genuine client care.</p>
             <p>Our practice has grown organically through referrals and word of mouth — the clearest sign that our clients trust us and recommend us to those they care about. We serve individuals, companies, NGOs and government entities across a wide range of legal matters, from complex immigration cases to commercial contracts, family disputes, personal injury and estates.</p>
             <p>As a wholly black-owned firm with two black women in its ranks, we are proud of our B-BBEE credentials and our deep commitment to transformation and economic empowerment. We actively support the immigrant and diaspora communities navigating South African law.</p>
             <p>Simon Chesire is a member of the <strong className="text-[#1A2E52]">Legal Practice Council (South Africa)</strong> and the <strong className="text-[#1A2E52]">Law Society of Kenya</strong>, with the right of appearance in the High Court. Our firm is a <strong className="text-[#1A2E52]">wholly black-owned concern</strong> — and we are proud of it.</p>
@@ -80,13 +80,12 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-full bg-[#1A2E52] flex items-center justify-center"><Award size={22} className="text-[#C9A84C]" /></div>
               <h2 className="font-[var(--font-playfair)] text-2xl font-bold text-[#1A2E52]">B-BBEE Credentials</h2>
             </div>
-            <p className="text-gray-600 leading-relaxed mb-4">Chesire Attorneys is a <strong className="text-[#1A2E52]">wholly black-owned concern</strong> with two black women in its leadership. The practice is fully committed to broad-based black economic empowerment and the advancement of all black people, including women, in the legal profession and in the communities we serve.</p>
+            <p className="text-gray-600 leading-relaxed mb-4">Chesire Attorneys is a <strong className="text-[#1A2E52]">wholly black-owned concern</strong>. The practice is fully committed to broad-based black economic empowerment and the advancement of all black people, including women, in the legal profession and in the communities we serve.</p>
             <p className="text-gray-600 leading-relaxed">We believe transformation is not just a regulatory obligation — it is a core part of who we are and what we stand for as a firm rooted in the post-1994 South African story.</p>
           </div>
           <div className="space-y-4">
             {[
               { label: "Ownership", value: "100% Black-Owned" },
-              { label: "Women in Leadership", value: "Two Black Women" },
               { label: "Community", value: "Batho Pele — People First" },
               { label: "Pro Bono", value: "Criminal & Civil cases for those who cannot afford legal aid" },
             ].map(({ label, value }) => (

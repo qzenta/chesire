@@ -41,7 +41,6 @@ export default function HomePage() {
             {[
               { label: "LSSA Registered", icon: "⚖️" },
               { label: "BB-BEE Level 1", icon: "🏅" },
-              { label: "Free Initial Consultation", icon: "💬" },
               { label: "Covered Parking Available", icon: "🅿️" },
               { label: "Near Joburg Courts", icon: "🏛️" },
             ].map((item, i) => (

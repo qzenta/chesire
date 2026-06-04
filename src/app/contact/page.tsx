@@ -12,7 +12,7 @@ const areaOptions = [
   "Other",
 ];
 
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27834078095";
+const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27824078095";
 const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
 
 export default function ContactPage() {
@@ -90,7 +90,7 @@ export default function ContactPage() {
                     value={form.phone}
                     onChange={handleChange}
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C]"
-                    placeholder="083 407 8095"
+                    placeholder="082 407 8095"
                   />
                 </div>
                 <div>
@@ -160,11 +160,11 @@ export default function ContactPage() {
             <ul className="space-y-4 text-sm text-gray-600">
               <li className="flex gap-3">
                 <MapPin size={18} className="text-[#C9A84C] shrink-0 mt-0.5" />
-                <span>83 Albertina Sisulu Rd, Works@Market City Centre, Johannesburg, 2110</span>
+                <span>83 Albertina Sisulu Rd, Works@Market City, Johannesburg, 2110</span>
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="text-[#C9A84C] shrink-0" />
-                <a href="tel:0834078095" className="hover:text-[#1A2E52]">083 407 8095</a>
+                <a href="tel:0824078095" className="hover:text-[#1A2E52]">082 407 8095</a>
               </li>
               <li className="flex gap-3">
                 <Mail size={18} className="text-[#C9A84C] shrink-0" />

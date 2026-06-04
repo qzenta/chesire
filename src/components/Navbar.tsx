@@ -48,8 +48,8 @@ export default function Navbar() {
       {/* Top bar — navy */}
       <div className="bg-[#1A2E52] text-white/70 text-xs px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-8">
-          <a href="tel:0834078095" className="hover:text-[#C9A84C] flex items-center gap-1.5 transition-colors">
-            <Phone size={11} /> 083 407 8095
+          <a href="tel:0824078095" className="hover:text-[#C9A84C] flex items-center gap-1.5 transition-colors">
+            <Phone size={11} /> 082 407 8095
           </a>
           <a href="mailto:info@chesireattorneys.co.za" className="hover:text-[#C9A84C] transition-colors hidden sm:block">
             info@chesireattorneys.co.za

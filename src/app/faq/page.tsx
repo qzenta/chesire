@@ -4,9 +4,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const faqs = [
-  { q: "Do you offer free consultations?", a: "Yes. Chesire Attorneys offers a free initial legal consultation. This gives you the opportunity to discuss your matter with one of our attorneys and understand your options before committing to any fees." },
-  { q: "Where are your offices located?", a: "Our offices are at 83 Albertina Sisulu Road, Works@Market City Centre, Johannesburg, 2110. We are walking distance from the Johannesburg Magistrates' Court and High Court, with covered parking available at our expense." },
-  { q: "How do I book a consultation?", a: "You can book a consultation online via our Calendly booking link, WhatsApp us on 083 407 8095, or fill in the contact form on our Contact page." },
+  { q: "Where are your offices located?", a: "Our offices are at 83 Albertina Sisulu Road, Works@Market City, Johannesburg, 2110. We are walking distance from the Johannesburg Magistrates' Court and High Court, with covered parking available at our expense." },
+  { q: "How do I book a consultation?", a: "You can book a consultation online via our Calendly booking link, WhatsApp us on 082 407 8095, or fill in the contact form on our Contact page." },
   { q: "What areas of law do you practise?", a: "Chesire Attorneys specialises in six practice areas: Commercial Law, Immigration Law, Civil Litigation, Family Law & Divorce, Labour & Employment Law, and Wills, Estates & Trusts." },
   { q: "Are you a registered law firm in South Africa?", a: "Yes. Chesire Attorneys is a registered law firm in South Africa. Our director, Simon Chesire, is a member of the Law Society of Northern Provinces and holds the right of appearance in the High Court." },
   { q: "Do you assist foreign nationals with immigration matters?", a: "Absolutely. Immigration law is one of our core practice areas. We assist foreign nationals with visa applications, work permits, permanent residence, asylum, appeals and all other immigration-related matters." },

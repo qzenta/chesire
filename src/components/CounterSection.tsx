@@ -69,7 +69,7 @@ export default function CounterSection() {
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { title: "Expert Legal Services", desc: "Quality advice across all areas of South African law from experienced attorneys." },
-            { title: "Free Consultation", desc: "We offer free initial legal consultations — because access to legal advice matters." },
+            { title: "Client-Centred Service", desc: "Every matter receives personal attention — you deal directly with your attorney from start to finish." },
             { title: "Strict Confidentiality", desc: "Every client matter is handled with complete professional confidentiality." },
             { title: "Timely Resolution", desc: "Regular communication and prompt action to resolve your matter efficiently." },
           ].map((item) => (

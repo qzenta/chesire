@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27834078095";
+const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27824078095";
 
 export default function WhatsAppButton() {
   return (
