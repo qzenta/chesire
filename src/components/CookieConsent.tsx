@@ -23,8 +23,8 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-[100] p-4 sm:p-6">
-      <div className="max-w-3xl mx-auto bg-[#1A2E52] text-white rounded-xl shadow-2xl border border-white/10 p-5 sm:p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+    <div className="fixed bottom-0 left-0 z-[100] p-4 sm:p-6">
+      <div className="max-w-lg bg-[#1A2E52] text-white rounded-xl shadow-2xl border border-white/10 p-5 sm:p-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
         <div className="flex-1 min-w-0">
           <p className="font-semibold text-sm mb-1">We use cookies 🍪</p>
           <p className="text-white/70 text-xs leading-relaxed">

@@ -7,13 +7,12 @@ const areaOptions = [
   "Immigration Law",
   "Civil Litigation",
   "Family Law & Divorce",
-  "Property & Conveyancing",
   "Labour & Employment Law",
   "Wills, Estates & Trusts",
   "Other",
 ];
 
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27000000000";
+const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27834078095";
 const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
 
 export default function ContactPage() {
@@ -91,7 +90,7 @@ export default function ContactPage() {
                     value={form.phone}
                     onChange={handleChange}
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#C9A84C] focus:ring-1 focus:ring-[#C9A84C]"
-                    placeholder="011 333 0389"
+                    placeholder="083 407 8095"
                   />
                 </div>
                 <div>
@@ -165,7 +164,7 @@ export default function ContactPage() {
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="text-[#C9A84C] shrink-0" />
-                <a href="tel:0113330389" className="hover:text-[#1A2E52]">011 333 0389</a>
+                <a href="tel:0834078095" className="hover:text-[#1A2E52]">083 407 8095</a>
               </li>
               <li className="flex gap-3">
                 <Mail size={18} className="text-[#C9A84C] shrink-0" />

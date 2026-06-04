@@ -18,7 +18,7 @@ function useReveal() {
 
 const highlights = [
   { icon: Globe, label: "Immigration specialists with 20+ years of expertise" },
-  { icon: Scale, label: "High Court right of appearance — no need to brief counsel" },
+  { icon: Scale, label: "High Court right of appearance — serving clients across Johannesburg and Alberton" },
   { icon: Users, label: "Wholly black-owned firm — B-BBEE Level 1 contributor" },
 ];
 

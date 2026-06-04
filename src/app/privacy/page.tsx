@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <h2>6. Your Rights</h2>
         <p>Under POPIA, you have the right to: access your personal information, correct inaccurate information, object to processing, and lodge a complaint with the Information Regulator.</p>
         <h2>7. Contact</h2>
-        <p>For privacy-related enquiries, contact our Information Officer at <a href="mailto:info@chesireattorneys.co.za" className="text-[#C9A84C]">info@chesireattorneys.co.za</a> or call 011 333 0389.</p>
+        <p>For privacy-related enquiries, contact our Information Officer at <a href="mailto:info@chesireattorneys.co.za" className="text-[#C9A84C]">info@chesireattorneys.co.za</a> or call <a href="tel:0834078095" className="text-[#C9A84C]">083 407 8095</a>.</p>
       </section>
     </>
   );

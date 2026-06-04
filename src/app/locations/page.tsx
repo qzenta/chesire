@@ -3,8 +3,6 @@ import { MapPin, ArrowRight, Phone } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const locations = [
-  { id: "randburg", name: "Randburg", img: "/images/locations/randburg.jpg", desc: "Serving clients in Randburg and the surrounding northern suburbs. Convenient access from Malibongwe Drive and Jan Smuts Avenue." },
-  { id: "southgate", name: "Southgate", img: "/images/locations/southgate.jpg", desc: "Legal services for clients in Southgate, Ridgeway, Mulbarton and surrounding southern Johannesburg communities." },
   { id: "boksburg", name: "Boksburg", img: "/images/locations/boksburg.jpg", desc: "Assisting clients in Boksburg, Benoni and the East Rand with immigration, litigation and family law matters." },
   { id: "germiston", name: "Germiston", img: "/images/locations/germiston.jpg", desc: "Serving Germiston, Ekurhuleni and surrounding areas. We handle all legal matters for East Rand residents." },
   { id: "edenvale", name: "Edenvale", img: "/images/locations/edenvale.jpg", desc: "Clients in Edenvale, Bedfordview and Modderfontein receive the same expert legal service as our city centre clients." },
@@ -21,7 +19,7 @@ export default function LocationsPage() {
       <PageHero
         label="Our Locations"
         title="Serving Greater Johannesburg"
-        subtitle="Chesire Attorneys is based in the Johannesburg CBD but serves clients across the greater Joburg metropolitan area — from Randburg in the north to The Glen in the south."
+        subtitle="Chesire Attorneys is based in the Johannesburg CBD and serves clients across the greater Joburg metropolitan area, including Alberton."
         image="/images/contact-hero.jpg"
       />
 
@@ -31,7 +29,7 @@ export default function LocationsPage() {
           Our offices at <strong className="text-[#1A2E52]">83 Albertina Sisulu Rd, Works@Market City Centre, Johannesburg</strong> are centrally located — walking distance from the Johannesburg Magistrates&apos; Court and High Court, with covered parking provided at no cost to clients.
         </p>
         <p className="text-gray-600 leading-relaxed mt-4">
-          We serve clients from across Greater Johannesburg. Whether you are in the northern suburbs, East Rand or South Joburg, contact us to arrange a consultation.
+          We serve clients from across Greater Johannesburg, including Alberton. Contact us to arrange a consultation regardless of where you are based.
         </p>
       </section>
 
@@ -73,7 +71,7 @@ export default function LocationsPage() {
         <div className="max-w-3xl mx-auto px-4 text-center text-white">
           <Phone size={32} className="text-[#C9A84C] mx-auto mb-4" />
           <h2 className="font-[var(--font-playfair)] text-3xl font-bold mb-4">Not Sure How to Reach Us?</h2>
-          <p className="text-white/70 mb-8">Call us on <a href="tel:0113330389" className="text-[#C9A84C] font-semibold">011 333 0389</a>, WhatsApp <a href="https://wa.me/27824078095" className="text-[#C9A84C] font-semibold">082 407 8095</a>, or use the booking form below.</p>
+          <p className="text-white/70 mb-8">Call or WhatsApp us on <a href="tel:0834078095" className="text-[#C9A84C] font-semibold">083 407 8095</a>, or use the booking form below.</p>
           <Link href="/contact" className="inline-block bg-[#C9A84C] hover:bg-[#b8963e] text-[#1A2E52] font-bold px-8 py-4 rounded transition-colors">
             Book a Consultation
           </Link>

@@ -1,4 +1,4 @@
-import { Scale, Globe, Users, Home, Briefcase, FileText, Building2, type LucideIcon } from "lucide-react";
+import { Scale, Globe, Users, Briefcase, FileText, Building2, type LucideIcon } from "lucide-react";
 
 export type Service = {
   id: string;
@@ -71,21 +71,6 @@ export const services: Service[] = [
       "Domestic violence protection orders",
       "Adoption proceedings",
       "Ante-nuptial contracts",
-    ],
-  },
-  {
-    id: "property-conveyancing",
-    slug: "property-conveyancing",
-    icon: Home,
-    title: "Property & Conveyancing",
-    desc: "Whether you are buying, selling or transferring property, our conveyancing team ensures your transaction proceeds smoothly and correctly. We handle transfers, bond registrations, sectional title matters and property disputes for both residential and commercial clients.",
-    bullets: [
-      "Property transfers",
-      "Bond registrations and cancellations",
-      "Sectional title and HOA matters",
-      "Property disputes",
-      "Lease agreements",
-      "Evictions",
     ],
   },
   {

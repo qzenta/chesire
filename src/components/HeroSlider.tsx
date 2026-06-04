@@ -15,7 +15,7 @@ const slides = [
     tag: "Immigration Law Specialists",
     heading: "Navigating South African",
     highlight: "Immigration Law",
-    sub: "From work visas and permanent residence to VFS applications and High Court challenges — we guide you every step of the way.",
+    sub: "Navigating from visas, permanent residence permits to High Court reviews — we guide you.",
   },
   {
     bg: "/images/hero-panel-2.jpg",
