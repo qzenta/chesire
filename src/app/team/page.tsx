@@ -14,11 +14,11 @@ const team = [
   },
   {
     img: "/images/team2.jpg",
-    name: "Attorney Name",
-    role: "Associate Attorney",
-    quals: "LLB (Placeholder — client to confirm)",
+    name: "Respina Tafirei",
+    role: "Professional Assistant",
+    quals: "LLB",
     areas: ["Family Law & Divorce", "Wills, Estates & Trusts", "Labour & Employment Law"],
-    bio: "[Placeholder — client to provide bio]. A dedicated attorney specialising in family and estate matters, known for empathetic and practical legal advice during life's most challenging moments.",
+    bio: "Respina Tafirei is a professional assistant at Chesire Attorneys, specialising in family law, estate matters and labour disputes. Known for her empathetic and practical approach, she provides dedicated support to clients navigating some of life's most challenging legal situations.",
     linkedin: null,
   },
 ];
@@ -28,36 +28,36 @@ export default function TeamPage() {
     <>
       <PageHero label="Our Team" title="The People Behind Chesire Attorneys" subtitle="Experienced attorneys who are passionate about the law and genuinely invested in your outcome." image="/images/team-hero.jpg" />
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {team.map((member, i) => (
-            <div key={i} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
-              <div className="h-80 overflow-hidden bg-[#1A2E52]/5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" />
-              </div>
-              <div className="p-8">
-                <h2 className="font-[var(--font-playfair)] text-2xl font-bold text-[#1A2E52]">{member.name}</h2>
-                <p className="text-[#C9A84C] font-semibold text-sm mb-1">{member.role}</p>
-                <p className="text-gray-500 text-xs mb-4">{member.quals}</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-5">{member.bio}</p>
-                <div className="mb-5">
-                  <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold mb-2">Areas of Practice</p>
-                  <div className="flex flex-wrap gap-2">
-                    {member.areas.map((a) => (
-                      <span key={a} className="bg-[#1A2E52]/5 text-[#1A2E52] text-xs px-3 py-1 rounded-full">{a}</span>
-                    ))}
-                  </div>
-                </div>
-                {member.linkedin && (
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#0077B5] text-sm hover:underline">
-                    <ExternalLink size={16} /> LinkedIn Profile
-                  </a>
-                )}
-              </div>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-10">
+        {team.map((member, i) => (
+          <div key={i} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row">
+            {/* Photo — fixed width left column */}
+            <div className="md:w-64 lg:w-72 shrink-0 overflow-hidden bg-[#1A2E52]/5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top min-h-64" />
             </div>
-          ))}
-        </div>
+            {/* Bio — right column */}
+            <div className="p-8 flex flex-col justify-center flex-1">
+              <h2 className="font-[var(--font-playfair)] text-2xl font-bold text-[#1A2E52]">{member.name}</h2>
+              <p className="text-[#C9A84C] font-semibold text-sm mb-1">{member.role}</p>
+              <p className="text-gray-500 text-xs mb-4">{member.quals}</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">{member.bio}</p>
+              <div className="mb-5">
+                <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold mb-2">Areas of Practice</p>
+                <div className="flex flex-wrap gap-2">
+                  {member.areas.map((a) => (
+                    <span key={a} className="bg-[#1A2E52]/5 text-[#1A2E52] text-xs px-3 py-1 rounded-full">{a}</span>
+                  ))}
+                </div>
+              </div>
+              {member.linkedin && (
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#0077B5] text-sm hover:underline">
+                  <ExternalLink size={16} /> LinkedIn Profile
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
       </section>
 
       <section className="bg-[#F0EEE9] py-20">

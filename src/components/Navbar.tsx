@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+// Submenus open on CSS hover — no JS state needed for desktop
 
 const links = [
   { href: "/", label: "Home" },
@@ -42,7 +43,6 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [openSub, setOpenSub] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 shadow-sm">
@@ -81,36 +81,32 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Desktop nav */}
+            {/* Desktop nav — submenus open on CSS hover, no JS needed */}
             <nav className="hidden lg:flex items-center gap-1">
               {links.map((l) =>
                 l.sub ? (
-                  <div
-                    key={l.href}
-                    className="relative group"
-                    onMouseEnter={() => setOpenSub(l.href)}
-                    onMouseLeave={() => setOpenSub(null)}
-                  >
+                  <div key={l.href} className="relative group">
                     <Link
                       href={l.href}
-                      className="text-[#1A2E52] hover:text-[#C9A84C] text-sm font-medium px-3 py-5 inline-flex items-center gap-1 transition-colors"
+                      className="text-[#1A2E52] hover:text-[#C9A84C] text-sm font-medium px-3 py-5 inline-flex items-center transition-colors"
                     >
                       {l.label}
-                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                     </Link>
-                    {openSub === l.href && (
-                      <div className="absolute top-full left-0 bg-white border border-gray-100 shadow-lg rounded-b-lg min-w-[220px] py-2 z-50">
-                        {l.sub.map((s) => (
-                          <Link
-                            key={s.href}
-                            href={s.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#F9F8F6] hover:text-[#C9A84C] transition-colors"
-                          >
-                            {s.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    {/* Invisible bridge prevents gap between link and dropdown */}
+                    <div className="absolute top-full left-0 w-full h-2 bg-transparent" />
+                    <div className="absolute top-[calc(100%+2px)] left-0 bg-white border border-gray-100 shadow-lg rounded-lg min-w-[220px] py-2 z-50
+                      opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                      transition-all duration-150 ease-out">
+                      {l.sub.map((s) => (
+                        <Link
+                          key={s.href}
+                          href={s.href}
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#F9F8F6] hover:text-[#C9A84C] transition-colors"
+                        >
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 ) : (
                   <Link

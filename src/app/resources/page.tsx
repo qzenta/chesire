@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
-import { Scale, BookOpen, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import { Scale, ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
 
 const featured = {
   title: "Understanding Your Rights as a Foreign National in South Africa",
@@ -16,32 +17,51 @@ const articles = [
   {
     title: "What to Do If You Are Served with a Summons",
     category: "Civil Litigation",
-    excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide.",
-    date: "April 2026",
+    excerpt: "Receiving a summons can be alarming. Acting quickly and correctly is essential — here is your step-by-step guide to responding before the deadline.",
+    date: "April 2024",
+    img: "/images/article2.jpg",
   },
   {
     title: "How to Start the Divorce Process in South Africa",
     category: "Family Law",
     excerpt: "Whether contested or uncontested, understanding the divorce process helps reduce stress and costs for both parties.",
-    date: "March 2026",
+    date: "March 2024",
+    img: "/images/article3.jpg",
   },
   {
-    title: "The Difference Between Civil and Criminal Cases Explained",
-    category: "Civil Litigation",
-    excerpt: "Many South Africans are unsure of the difference between civil and criminal proceedings. This guide explains both clearly.",
-    date: "February 2026",
+    title: "What Every Employer Must Know About the CCMA",
+    category: "Labour Law",
+    excerpt: "The CCMA handles thousands of unfair dismissal and retrenchment cases every year. Here is what employers and employees need to know before a dispute reaches conciliation.",
+    date: "February 2024",
+    img: "/images/article-labour.jpg",
+  },
+  {
+    title: "How to Apply for a Work Visa in South Africa: Step-by-Step",
+    category: "Immigration Law",
+    excerpt: "The South African work visa process is complex and time-sensitive. This guide breaks down the categories, requirements and common mistakes that lead to rejection.",
+    date: "January 2024",
+    img: "/images/article-immigration.jpg",
   },
   {
     title: "How to Register a Deceased Estate in South Africa",
     category: "Wills & Estates",
-    excerpt: "The death of a loved one is never easy. Here is a step-by-step overview of the estate administration process.",
-    date: "January 2026",
+    excerpt: "The death of a loved one is never easy. Here is a step-by-step overview of the estate administration process from reporting to the Master to final distribution.",
+    date: "December 2023",
+    img: "/images/article1.jpg",
+  },
+  {
+    title: "Protecting Your Business with a Proper Commercial Contract",
+    category: "Commercial Law",
+    excerpt: "Many South African businesses operate on verbal agreements or poorly drafted contracts — leaving them exposed to disputes and liability. Here is what a sound commercial contract must include.",
+    date: "November 2023",
+    img: "/images/article-commercial.jpg",
   },
   {
     title: "Your Rights as a Tenant Under the Rental Housing Act",
     category: "Property Law",
     excerpt: "South African tenants have strong legal protections. Know your rights before signing a lease or facing eviction.",
-    date: "December 2025",
+    date: "October 2023",
+    img: "/images/article2.jpg",
   },
 ];
 
@@ -125,8 +145,8 @@ export default function ResourcesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((a, i) => (
             <div key={i} className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm flex flex-col">
-              <div className="h-36 bg-[#1A2E52]/5 flex items-center justify-center">
-                <BookOpen size={36} className="text-[#1A2E52]/15" />
+              <div className="h-44 relative overflow-hidden bg-[#1A2E52]/5">
+                <Image src={a.img} alt={a.title} fill className="object-cover" />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <span className="text-[#C9A84C] text-xs font-semibold uppercase tracking-wide mb-2">{a.category}</span>

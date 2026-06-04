@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Scale, Globe, Users, Home, Briefcase, FileText, Star, ArrowRight, Calendar, Shield } from "lucide-react";
 import DiagonalHero from "@/components/DiagonalHero";
 import CounterSection from "@/components/CounterSection";
+import PartnersMarquee from "@/components/PartnersMarquee";
 
 const practiceAreas = [
   { icon: Globe, title: "Immigration Law", desc: "Visas, permits, asylum and citizenship matters for foreign nationals in South Africa." },
@@ -65,6 +66,7 @@ export default function HomePage() {
 
       {/* Why choose us + animated counters */}
       <CounterSection />
+      <PartnersMarquee />
 
       {/* Team preview */}
       <section className="bg-[#F0EEE9] py-20">
