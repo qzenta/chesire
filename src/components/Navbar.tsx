@@ -68,15 +68,15 @@ export default function Navbar() {
       {/* Main nav — white */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo on white */}
             <Link href="/" className="flex items-center shrink-0">
               <Image
                 src="/images/logo.png"
                 alt="Chesire Attorneys"
-                width={160}
-                height={52}
-                className="h-11 w-auto"
+                width={220}
+                height={72}
+                className="h-14 w-auto"
                 priority
               />
             </Link>
