@@ -39,10 +39,11 @@ export default function LocationsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {locations.map((loc) => (
-            <div
+            <Link
               key={loc.id}
               id={loc.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-md hover:border-[#C9A84C] transition-all"
+              href={`/contact?from=${loc.id}`}
+              className="scroll-mt-32 bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-md hover:border-[#C9A84C] transition-colors flex flex-col"
             >
               <div className="h-48 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -52,17 +53,17 @@ export default function LocationsPage() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-3">
                   <MapPin size={16} className="text-[#C9A84C]" />
                   <h2 className="font-[var(--font-playfair)] text-lg font-bold text-[#1A2E52]">{loc.name}</h2>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{loc.desc}</p>
-                <Link href="/contact" className="inline-flex items-center gap-1 text-[#C9A84C] text-sm font-medium hover:underline">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">{loc.desc}</p>
+                <span className="inline-flex items-center gap-1 text-[#C9A84C] text-sm font-medium">
                   Enquire from {loc.name} <ArrowRight size={13} />
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
