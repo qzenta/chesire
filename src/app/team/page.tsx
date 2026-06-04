@@ -9,7 +9,7 @@ const team = [
     role: "Director & Founder",
     quals: "LLB — Advocate (Kenya) | Attorney (South Africa)",
     areas: ["Immigration Law", "Civil Litigation", "Criminal Law", "Human Rights Law", "Personal Injury"],
-    bio: "Simon Chesire founded Chesire Attorneys after an extensive career as an advocate in Kenya. Since relocating to South Africa, he has built a reputation as one of Johannesburg's most dedicated boutique attorneys. Simon is a member of the Law Society of Northern Provinces and the Law Society of Kenya, with the right of appearance in the High Court. He specialises in immigration law, commercial litigation, personal injury, criminal law, human rights law and divorce matters.",
+    bio: "Simon Chesire founded Chesire Attorneys after an extensive career as an advocate in Kenya. With over 12 years of legal practice, he has built a reputation as one of Johannesburg's most dedicated boutique attorneys. Simon is a member of the Legal Practice Council (South Africa) and the Law Society of Kenya, with the right of appearance in the High Court. He specialises in immigration law, commercial litigation, personal injury, criminal law, human rights law and divorce matters.",
     linkedin: "https://www.linkedin.com/in/chesire-attorneys-ab20aa121/",
   },
   {
