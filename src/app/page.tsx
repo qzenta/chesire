@@ -1,16 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Scale, Globe, Users, Home, Briefcase, FileText, Star, ArrowRight, Calendar, Shield } from "lucide-react";
+import { Scale, Globe, Users, Building2, Briefcase, FileText, Star, ArrowRight, Calendar } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
+import HeroStats from "@/components/HeroStats";
 import CounterSection from "@/components/CounterSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import FirmSnapshot from "@/components/FirmSnapshot";
 
 const practiceAreas = [
+  { icon: Building2, title: "Commercial Law", desc: "Contracts, company incorporations, mergers, business rescue and regulatory compliance." },
   { icon: Globe, title: "Immigration Law", desc: "Visas, permits, asylum and citizenship matters for foreign nationals in South Africa." },
   { icon: Scale, title: "Civil Litigation", desc: "Representing clients in disputes, debt recovery, and High Court matters." },
   { icon: Users, title: "Family Law & Divorce", desc: "Divorce, maintenance, custody, domestic violence and adoption proceedings." },
-  { icon: Home, title: "Property & Conveyancing", desc: "Transfers, bond registrations, sectional title and property disputes." },
   { icon: Briefcase, title: "Labour & Employment", desc: "CCMA disputes, unfair dismissal, employment contracts and workplace compliance." },
   { icon: FileText, title: "Wills, Estates & Trusts", desc: "Drafting wills, deceased estate administration and trust formation." },
 ];
@@ -33,6 +34,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSlider />
+      <HeroStats />
 
       {/* Trust bar — animated badges */}
       <section className="bg-white border-b border-gray-100 shadow-sm py-6">

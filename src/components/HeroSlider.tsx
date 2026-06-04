@@ -126,8 +126,15 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-[#F9F8F6] to-transparent" />
+      {/* Diagonal bottom edge — Amwal style */}
+      <svg
+        className="absolute bottom-0 left-0 w-full"
+        viewBox="0 0 1440 72"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0,72 L1440,0 L1440,72 Z" fill="#F9F8F6" />
+      </svg>
     </section>
   );
 }
