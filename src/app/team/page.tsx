@@ -9,7 +9,7 @@ const team = [
     role: "Director & Founder",
     quals: "LLB — Advocate (Kenya) | Attorney (South Africa)",
     areas: ["Immigration Law", "Civil Litigation", "Criminal Law", "Human Rights Law", "Personal Injury"],
-    bio: "Simon Chesire founded Chesire Attorneys after an extensive career as an advocate in Kenya. With over 12 years of legal practice, he has built a reputation as one of Johannesburg's most dedicated boutique attorneys. Simon is a member of the Legal Practice Council (South Africa) and the Law Society of Kenya, with the right of appearance in the High Court. He specialises in immigration law, commercial litigation, personal injury, criminal law, human rights law and divorce matters.",
+    bio: "Simon Chesire founded Chesire Attorneys in 2006 after an extensive career spanning over 20 years across Kenya and South Africa. He began his legal career with the Kenya Defence Force (1993–1995), followed by practice at Mbulo & Company Advocates in Nairobi, the Legal Aid Bureau and Johannesburg Community Legal Centre, and immigration consultancy at Rabari & Associates. He is a member of the Legal Practice Council (South Africa) and the Law Society of Kenya, with the right of appearance in the High Court. Simon specialises in immigration law, commercial litigation, personal injury, criminal law, human rights law, alternative dispute resolution and divorce matters.",
     linkedin: "https://www.linkedin.com/in/chesire-attorneys-ab20aa121/",
   },
   {

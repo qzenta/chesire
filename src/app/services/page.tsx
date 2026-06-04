@@ -1,17 +1,33 @@
 import Link from "next/link";
-import { Scale, Globe, Users, Home, Briefcase, FileText, ArrowRight } from "lucide-react";
+import { Scale, Globe, Users, Home, Briefcase, FileText, ArrowRight, Building2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const services = [
   {
+    icon: Building2,
+    title: "Commercial Law",
+    desc: "We have vast experience advising on commercial contracts of every kind and magnitude across the Republic and regionally. From company incorporations and mergers to business rescue and compliance with the Consumer Protection Act, National Credit Act and related legislation — we provide independent, expert commercial advice that protects your business. We have advised State Owned Enterprises, NGOs and private companies alike.",
+    bullets: [
+      "Commercial contracts (drafting, review, disputes)",
+      "Company incorporations and mergers & acquisitions",
+      "Business rescue and liquidation advice",
+      "Consumer Protection Act compliance",
+      "National Credit Act compliance",
+      "Advice to State Owned Enterprises and NGOs",
+      "Alternative Dispute Resolution (ADR)",
+    ],
+  },
+  {
     icon: Globe,
     title: "Immigration Law",
-    desc: "South African immigration law is complex and constantly evolving. Our attorneys assist foreign nationals, families and businesses with the full range of immigration matters — from temporary and permanent residence applications to visa appeals, work permits, asylum and citizenship. We have extensive experience working with the Department of Home Affairs and supporting the Joburg immigrant and diaspora community.",
+    desc: "South African immigration law is complex, constantly evolving and increasingly difficult to navigate — particularly with the advent of VFS Global and mandatory online applications. Our attorneys have extensive expertise in all categories of visas, assisting individuals, families and employers to compile, submit and appeal applications correctly. Where Home Affairs makes unlawful or arbitrary decisions, we are prepared to challenge these in the High Court.",
     bullets: [
       "Temporary and permanent residence permits",
       "Work and business visas",
       "Spousal and relative permits",
       "Asylum and refugee matters",
+      "VFS Global and online application assistance",
+      "High Court challenges against unfair decisions",
       "Appeals and reviews",
       "Citizenship applications",
     ],

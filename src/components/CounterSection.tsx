@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Shield, Users, MessageSquare, Star } from "lucide-react";
 
 const stats = [
-  { icon: Shield, end: 16, suffix: "+", label: "Years of Experience" },
+  { icon: Shield, end: 20, suffix: "+", label: "Years of Experience" },
   { icon: Users, end: 157, suffix: "+", label: "Clients Served" },
   { icon: Star, end: 98, suffix: "%", label: "Client Satisfaction" },
   { icon: MessageSquare, end: 50, suffix: "+", label: "New Cases Monthly" },
