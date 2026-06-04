@@ -4,6 +4,7 @@ import { Scale, Globe, Users, Home, Briefcase, FileText, Star, ArrowRight, Calen
 import HeroSlider from "@/components/HeroSlider";
 import CounterSection from "@/components/CounterSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
+import FirmSnapshot from "@/components/FirmSnapshot";
 
 const practiceAreas = [
   { icon: Globe, title: "Immigration Law", desc: "Visas, permits, asylum and citizenship matters for foreign nationals in South Africa." },
@@ -33,16 +34,31 @@ export default function HomePage() {
     <>
       <HeroSlider />
 
-      {/* Trust bar */}
-      <section className="bg-white border-b border-gray-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-            {["LSSA Registered","BB-BEE Level 1","Free Initial Consultation","Covered Parking Available","Near Joburg Courts"].map(t => (
-              <span key={t} className="flex items-center gap-1.5"><Shield size={13} className="text-[#C9A84C]" />{t}</span>
+      {/* Trust bar — animated badges */}
+      <section className="bg-white border-b border-gray-100 shadow-sm py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { label: "LSSA Registered", icon: "⚖️" },
+              { label: "BB-BEE Level 1", icon: "🏅" },
+              { label: "Free Initial Consultation", icon: "💬" },
+              { label: "Covered Parking Available", icon: "🅿️" },
+              { label: "Near Joburg Courts", icon: "🏛️" },
+            ].map((item, i) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-2 bg-[#F0EEE9] border border-[#C9A84C]/30 rounded-full px-5 py-2.5 hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] transition-all duration-200 hover:scale-105 cursor-default"
+                style={{ animation: "fadeInUp 0.5s ease both", animationDelay: `${i * 0.1}s` }}
+              >
+                <span className="text-lg leading-none">{item.icon}</span>
+                <span className="text-[#1A2E52] text-sm font-semibold whitespace-nowrap">{item.label}</span>
+              </div>
             ))}
           </div>
         </div>
       </section>
+
+      <FirmSnapshot />
 
       {/* Practice areas */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -106,18 +122,33 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-12">
-          <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold text-[#1A2E52] mb-3">What Our Clients Say</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div key={i} className="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
-              <div className="flex gap-1 mb-4">{[...Array(5)].map((_,j) => <Star key={j} size={16} className="text-[#C9A84C] fill-[#C9A84C]" />)}</div>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
-              <p className="text-[#1A2E52] text-xs font-semibold">— {t.author}</p>
-            </div>
-          ))}
+      <section className="bg-[#1A2E52] py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-3">Client Feedback</p>
+            <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white mb-3">What Our Clients Say</h2>
+            <p className="text-white/60 max-w-xl mx-auto">Real experiences from clients we have been privileged to assist.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col hover:bg-white/10 transition-colors duration-300"
+                style={{ animation: "fadeInUp 0.6s ease both", animationDelay: `${i * 0.15}s` }}
+              >
+                <div className="flex gap-1 mb-5">
+                  {[...Array(5)].map((_, j) => <Star key={j} size={18} className="text-[#C9A84C] fill-[#C9A84C]" />)}
+                </div>
+                <p className="text-white/85 text-base leading-relaxed mb-6 italic flex-1">&ldquo;{t.quote}&rdquo;</p>
+                <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                  <div className="w-9 h-9 rounded-full bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C] font-bold text-sm">
+                    {t.author.charAt(0)}
+                  </div>
+                  <p className="text-[#C9A84C] text-sm font-semibold">{t.author}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

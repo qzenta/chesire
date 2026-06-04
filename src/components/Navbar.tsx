@@ -13,6 +13,7 @@ const links = [
     href: "/services",
     label: "Services",
     sub: [
+      { href: "/services#commercial-law", label: "Commercial Law" },
       { href: "/services#immigration-law", label: "Immigration Law" },
       { href: "/services#civil-litigation", label: "Civil Litigation" },
       { href: "/services#family-law-divorce", label: "Family Law & Divorce" },
@@ -81,7 +82,7 @@ export default function Navbar() {
                   <div key={l.href} className="relative group">
                     <Link
                       href={l.href}
-                      className="text-[#1A2E52] hover:text-[#C9A84C] text-sm font-medium px-3 py-5 inline-flex items-center transition-colors"
+                      className="text-[#1A2E52] hover:text-[#C9A84C] text-[15px] font-medium px-3 py-5 inline-flex items-center transition-colors"
                     >
                       {l.label}
                     </Link>
@@ -105,7 +106,7 @@ export default function Navbar() {
                   <Link
                     key={l.href}
                     href={l.href}
-                    className="text-[#1A2E52] hover:text-[#C9A84C] text-sm font-medium px-3 py-5 transition-colors"
+                    className="text-[#1A2E52] hover:text-[#C9A84C] text-[15px] font-medium px-3 py-5 transition-colors"
                   >
                     {l.label}
                   </Link>

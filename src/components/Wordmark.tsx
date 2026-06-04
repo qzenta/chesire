@@ -6,7 +6,7 @@ export default function Wordmark({ inverted = false }: WordmarkProps) {
   return (
     <div className="flex flex-col leading-none select-none">
       <span
-        className="font-[var(--font-playfair)] font-bold tracking-wide text-xl"
+        className="font-[var(--font-playfair)] font-bold tracking-wide text-2xl"
         style={{ color: inverted ? "#C9A84C" : "#1A2E52" }}
       >
         CHESIRE
