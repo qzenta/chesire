@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Scale, Globe, Users, Building2, Briefcase, FileText, Star, ArrowRight, Calendar } from "lucide-react";
+import { Scale, Globe, Users, Building2, Briefcase, FileText, ArrowRight, Calendar } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import HeroStats from "@/components/HeroStats";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import CounterSection from "@/components/CounterSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import FirmSnapshot from "@/components/FirmSnapshot";
@@ -14,11 +15,6 @@ const practiceAreas = [
   { icon: Users, title: "Family Law & Divorce", desc: "Divorce, maintenance, custody, domestic violence and adoption proceedings." },
   { icon: Briefcase, title: "Labour & Employment", desc: "CCMA disputes, unfair dismissal, employment contracts and workplace compliance." },
   { icon: FileText, title: "Wills, Estates & Trusts", desc: "Drafting wills, deceased estate administration and trust formation." },
-];
-
-const testimonials = [
-  { quote: "Chesire Attorneys handled my immigration matter with professionalism and care. I highly recommend them to anyone navigating the South African visa system.", author: "Client — Immigration Matter" },
-  { quote: "The team guided me through my divorce with sensitivity and expertise. I felt supported throughout a very difficult time.", author: "Client — Family Law Matter" },
 ];
 
 const articles = [
@@ -120,36 +116,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-[#1A2E52] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase mb-3">Client Feedback</p>
-            <h2 className="font-[var(--font-playfair)] text-3xl sm:text-4xl font-bold text-white mb-3">What Our Clients Say</h2>
-            <p className="text-white/60 max-w-xl mx-auto">Real experiences from clients we have been privileged to assist.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col hover:bg-white/10 transition-colors duration-300"
-                style={{ animation: "fadeInUp 0.6s ease both", animationDelay: `${i * 0.15}s` }}
-              >
-                <div className="flex gap-1 mb-5">
-                  {[...Array(5)].map((_, j) => <Star key={j} size={18} className="text-[#C9A84C] fill-[#C9A84C]" />)}
-                </div>
-                <p className="text-white/85 text-base leading-relaxed mb-6 italic flex-1">&ldquo;{t.quote}&rdquo;</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                  <div className="w-9 h-9 rounded-full bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C] font-bold text-sm">
-                    {t.author.charAt(0)}
-                  </div>
-                  <p className="text-[#C9A84C] text-sm font-semibold">{t.author}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsCarousel />
 
       {/* Latest resources */}
       <section className="bg-[#F0EEE9] py-20">
