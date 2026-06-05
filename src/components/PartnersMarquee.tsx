@@ -1,3 +1,5 @@
+"use client";
+
 const partners = [
   { name: "Legal Practice Council", abbr: "LPC", logo: "/images/partners/lpc.png" },
   { name: "Law Society of Kenya", abbr: "LSK", logo: "/images/partners/lsk.png" },
