@@ -23,7 +23,7 @@ const team = [
     name: "Respina Tafirei",
     role: "Professional Assistant",
     quals: "LLB",
-    areas: ["Family Law & Divorce", "Wills, Estates & Trusts", "Labour & Employment Law"],
+    areas: [],
     bio: "Respina Tafirei is a professional assistant at Chesire Attorneys.",
     linkedin: null,
   },
@@ -52,14 +52,16 @@ export default function TeamPage() {
               <p className="text-[#C9A84C] font-semibold text-sm mb-1">{member.role}</p>
               <p className="text-gray-500 text-xs mb-4">{member.quals}</p>
               <p className="text-gray-600 text-sm leading-relaxed mb-5">{member.bio}</p>
-              <div className="mb-5">
-                <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold mb-2">Areas of Practice</p>
-                <div className="flex flex-wrap gap-2">
-                  {member.areas.map((a) => (
-                    <span key={a} className="bg-[#1A2E52]/5 text-[#1A2E52] text-xs px-3 py-1 rounded-full">{a}</span>
-                  ))}
+              {member.areas.length > 0 && (
+                <div className="mb-5">
+                  <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold mb-2">Areas of Practice</p>
+                  <div className="flex flex-wrap gap-2">
+                    {member.areas.map((a) => (
+                      <span key={a} className="bg-[#1A2E52]/5 text-[#1A2E52] text-xs px-3 py-1 rounded-full">{a}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
               {member.linkedin && (
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#0077B5] text-sm hover:underline">
                   <ExternalLink size={16} /> LinkedIn Profile

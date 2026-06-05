@@ -17,7 +17,6 @@ const links = [
       { href: "/services/immigration-law", label: "Immigration Law" },
       { href: "/services/civil-litigation", label: "Civil Litigation" },
       { href: "/services/family-law-divorce", label: "Family Law & Divorce" },
-      { href: "/services/property-conveyancing", label: "Property & Conveyancing" },
       { href: "/services/labour-employment-law", label: "Labour & Employment" },
       { href: "/services/wills-estates-trusts", label: "Wills, Estates & Trusts" },
     ],

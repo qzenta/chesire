@@ -64,7 +64,6 @@ export default function Footer() {
               "Immigration Law",
               "Civil Litigation",
               "Family Law & Divorce",
-              "Property & Conveyancing",
               "Labour & Employment",
               "Wills & Estates",
             ].map((area) => (
@@ -81,7 +80,7 @@ export default function Footer() {
           <ul className="space-y-4 text-sm">
             <li className="flex gap-2.5">
               <MapPin size={15} className="text-[#C9A84C] shrink-0 mt-0.5" />
-              <span>83 Albertina Sisulu Rd, Works@Market City, Johannesburg, 2110</span>
+              <span>83 Albertina Sisulu Rd, Works@Market Building, Johannesburg, 2110</span>
             </li>
             <li className="flex gap-2.5">
               <Phone size={15} className="text-[#C9A84C] shrink-0" />

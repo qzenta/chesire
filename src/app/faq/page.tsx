@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const faqs = [
-  { q: "Where are your offices located?", a: "Our offices are at 83 Albertina Sisulu Road, Works@Market City, Johannesburg, 2110. We are walking distance from the Johannesburg Magistrates' Court and High Court, with covered parking available at our expense." },
+  { q: "Where are your offices located?", a: "Our offices are at 83 Albertina Sisulu Road, Works@Market Building, Johannesburg, 2110. We are walking distance from the Johannesburg Magistrates' Court and High Court." },
   { q: "How do I book a consultation?", a: "You can book a consultation online via our Calendly booking link, WhatsApp us on 082 407 8095, or fill in the contact form on our Contact page." },
   { q: "What areas of law do you practise?", a: "Chesire Attorneys specialises in six practice areas: Commercial Law, Immigration Law, Civil Litigation, Family Law & Divorce, Labour & Employment Law, and Wills, Estates & Trusts." },
   { q: "Are you a registered law firm in South Africa?", a: "Yes. Chesire Attorneys is a registered law firm in South Africa. Our director, Simon Chesire, is a member of the Law Society of Northern Provinces and holds the right of appearance in the High Court." },

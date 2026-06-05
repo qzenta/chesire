@@ -160,7 +160,7 @@ export default function ContactPage() {
             <ul className="space-y-4 text-sm text-gray-600">
               <li className="flex gap-3">
                 <MapPin size={18} className="text-[#C9A84C] shrink-0 mt-0.5" />
-                <span>83 Albertina Sisulu Rd, Works@Market City, Johannesburg, 2110</span>
+                <span>83 Albertina Sisulu Rd, Works@Market Building, Johannesburg, 2110</span>
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="text-[#C9A84C] shrink-0" />

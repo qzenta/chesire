@@ -19,7 +19,6 @@ const practiceAreas = [
 const testimonials = [
   { quote: "Chesire Attorneys handled my immigration matter with professionalism and care. I highly recommend them to anyone navigating the South African visa system.", author: "Client — Immigration Matter" },
   { quote: "The team guided me through my divorce with sensitivity and expertise. I felt supported throughout a very difficult time.", author: "Client — Family Law Matter" },
-  { quote: "Excellent service and clear communication. My property transfer was handled efficiently and without any surprises.", author: "Client — Property & Conveyancing" },
 ];
 
 const articles = [

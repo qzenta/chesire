@@ -26,7 +26,7 @@ export default function LocationsPage() {
       {/* Intro */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
         <p className="text-gray-600 leading-relaxed text-lg">
-          Our offices at <strong className="text-[#1A2E52]">83 Albertina Sisulu Rd, Works@Market City, Johannesburg</strong> are centrally located — walking distance from the Johannesburg Magistrates&apos; Court and High Court, with covered parking provided at no cost to clients.
+          Our offices at <strong className="text-[#1A2E52]">83 Albertina Sisulu Rd, Works@Market Building, Johannesburg</strong> are centrally located — walking distance from the Johannesburg Magistrates&apos; Court and High Court, with covered parking provided at no cost to clients.
         </p>
         <p className="text-gray-600 leading-relaxed mt-4">
           We serve clients from across Greater Johannesburg, including Alberton. Contact us to arrange a consultation regardless of where you are based.
