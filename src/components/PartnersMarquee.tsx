@@ -3,8 +3,8 @@
 const partners = [
   { name: "Legal Practice Council", abbr: "LPC", logo: "/images/partners/lpc.png" },
   { name: "Law Society of Kenya", abbr: "LSK", logo: "/images/partners/lsk.png" },
-  { name: "Commission for Conciliation, Mediation & Arbitration", abbr: "CCMA", logo: "/images/partners/ccma.png" },
-  { name: "Department of Home Affairs", abbr: "DHA", logo: "/images/partners/dha.png" },
+  { name: "Commission for Conciliation, Mediation & Arbitration", abbr: "CCMA", logo: "/images/partners/ccma.jpg" },
+  { name: "Department of Home Affairs", abbr: "DHA", logo: "/images/partners/dha.jpg" },
   { name: "VFS Global", abbr: "VFS", logo: "/images/partners/vfs.png" },
   { name: "Road Accident Fund", abbr: "RAF", logo: "/images/partners/raf.png" },
   { name: "South African Human Rights Commission", abbr: "SAHRC", logo: "/images/partners/sahrc.png" },
