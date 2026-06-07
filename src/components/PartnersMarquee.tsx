@@ -24,35 +24,34 @@ export default function PartnersMarquee() {
         {[0, 1].map((set) => (
           <div
             key={set}
-            className="flex shrink-0 animate-marquee gap-10 pr-10"
+            className="flex shrink-0 animate-marquee gap-6 pr-6"
             aria-hidden={set === 1}
           >
             {partners.map((p) => (
               <div
                 key={p.abbr + set}
-                className="flex items-center gap-3 bg-[#F0EEE9] rounded-lg px-5 py-3 shrink-0"
+                title={p.name}
+                className="flex items-center justify-center bg-white border border-gray-100 rounded-xl w-20 h-20 shrink-0 shadow-sm hover:shadow-md transition-shadow"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.logo}
                   alt={p.name}
-                  className="w-9 h-9 object-contain rounded"
+                  className="w-14 h-14 object-contain"
                   onError={(e) => {
-                    // Fallback to initials badge if image missing
                     const target = e.currentTarget;
                     target.style.display = "none";
                     const sibling = target.nextElementSibling as HTMLElement | null;
                     if (sibling) sibling.style.display = "flex";
                   }}
                 />
-                {/* Fallback initials badge — hidden when logo loads */}
+                {/* Fallback monogram badge */}
                 <span
-                  className="w-9 h-9 rounded-full bg-[#1A2E52] text-white text-xs font-bold items-center justify-center shrink-0 hidden"
+                  className="w-14 h-14 rounded-full bg-[#1A2E52] text-white text-sm font-bold items-center justify-center hidden"
                   aria-hidden="true"
                 >
                   {p.abbr.slice(0, 2)}
                 </span>
-                <span className="text-[#1A2E52] text-sm font-medium whitespace-nowrap">{p.name}</span>
               </div>
             ))}
           </div>

@@ -19,10 +19,10 @@ const team = [
     linkedin: "https://www.linkedin.com/in/chesire-attorneys-ab20aa121/",
   },
   {
-    img: "/images/team2.jpg",
+    img: "/images/Respina.png",
     name: "Respina Tafirei",
-    role: "Professional Assistant",
-    quals: "LLB",
+    role: "",
+    quals: "MSc UJ, BSc Hons UNISA",
     areas: [],
     bio: "Respina Tafirei is a professional assistant at Chesire Attorneys.",
     linkedin: null,
