@@ -89,7 +89,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {[
               { img: "/images/team1.jpg", name: "Simon Chesire", role: "Director & Founder", areas: "Immigration, Civil Litigation, Criminal Law" },
-              { img: "/images/team2.jpg", name: "Respina Tafirei", role: "Professional Assistant", areas: "Family Law, Estates, Labour Law" },
+              { img: "/images/Respina.png", name: "Respina Tafirei", role: "Professional Assistant", areas: "Family Law, Estates, Labour Law" },
             ].map((m, i) => (
               <div
                 key={i}

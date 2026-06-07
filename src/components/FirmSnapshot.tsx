@@ -76,9 +76,9 @@ export default function FirmSnapshot() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/about-hero.jpg"
-          alt="Chesire Attorneys offices"
-          className="w-full h-full object-cover"
+          src="/images/about-team.jpg"
+          alt="Chesire Attorneys — Black-owned law firm"
+          className="w-full h-full object-cover object-top"
         />
       </div>
     </section>
