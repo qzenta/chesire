@@ -15,7 +15,7 @@ const partners = [
 
 export default function PartnersMarquee() {
   return (
-    <section className="bg-white border-y border-gray-100 py-6 overflow-hidden">
+    <section className="bg-white border-y border-gray-100 py-10 overflow-hidden">
       <p className="text-center text-xs text-gray-400 uppercase tracking-widest font-semibold mb-5">
         Regulatory Bodies &amp; Legal Partners
       </p>
@@ -24,20 +24,20 @@ export default function PartnersMarquee() {
         {[0, 1].map((set) => (
           <div
             key={set}
-            className="flex shrink-0 animate-marquee gap-6 pr-6"
+            className="flex shrink-0 animate-marquee gap-8 pr-8 items-center"
             aria-hidden={set === 1}
           >
             {partners.map((p) => (
               <div
                 key={p.abbr + set}
                 title={p.name}
-                className="flex items-center justify-center bg-white border border-gray-100 rounded-xl w-20 h-20 shrink-0 shadow-sm hover:shadow-md transition-shadow"
+                className="flex items-center justify-center bg-white border border-gray-100 rounded-2xl w-40 h-40 shrink-0 shadow-sm hover:shadow-md transition-shadow p-4"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.logo}
                   alt={p.name}
-                  className="w-14 h-14 object-contain"
+                  className="w-full h-full object-contain"
                   onError={(e) => {
                     const target = e.currentTarget;
                     target.style.display = "none";
@@ -47,7 +47,7 @@ export default function PartnersMarquee() {
                 />
                 {/* Fallback monogram badge */}
                 <span
-                  className="w-14 h-14 rounded-full bg-[#1A2E52] text-white text-sm font-bold items-center justify-center hidden"
+                  className="w-20 h-20 rounded-full bg-[#1A2E52] text-white text-lg font-bold items-center justify-center hidden"
                   aria-hidden="true"
                 >
                   {p.abbr.slice(0, 2)}
