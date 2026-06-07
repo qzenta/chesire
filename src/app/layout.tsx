@@ -22,15 +22,33 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Chesire Attorneys | Expert Legal Services in Johannesburg",
   description:
-    "Chesire Attorneys is a boutique Johannesburg law firm offering expert legal services in immigration, civil litigation, family law, property, labour and estates.",
+    "Chesire Attorneys is a boutique Johannesburg law firm offering expert legal services in immigration, civil litigation, family law, labour and estates.",
+  metadataBase: new URL("https://www.chesireattorneys.co.za"),
+  alternates: {
+    canonical: "https://www.chesireattorneys.co.za",
+  },
   openGraph: {
     title: "Chesire Attorneys | Expert Legal Services in Johannesburg",
     description:
-      "Boutique Johannesburg law firm. Immigration law, civil litigation, family law, property, labour and estates.",
+      "Boutique Johannesburg law firm. Immigration law, civil litigation, family law, labour and estates.",
     url: "https://www.chesireattorneys.co.za",
     siteName: "Chesire Attorneys",
     locale: "en_ZA",
     type: "website",
+    images: [
+      {
+        url: "/images/about-team.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chesire Attorneys — Expert Legal Services in Johannesburg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chesire Attorneys | Expert Legal Services in Johannesburg",
+    description: "Boutique Johannesburg law firm. Immigration, litigation, family law, labour and estates.",
+    images: ["/images/about-team.jpg"],
   },
 };
 

@@ -26,8 +26,46 @@ const articles = [
 const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Chesire Attorneys",
+    "url": "https://www.chesireattorneys.co.za",
+    "logo": "https://www.chesireattorneys.co.za/images/logo.png",
+    "image": "https://www.chesireattorneys.co.za/images/about-team.jpg",
+    "description": "Boutique Johannesburg law firm offering expert legal services in immigration, civil litigation, family law, labour and estates.",
+    "telephone": "+27824078095",
+    "email": "Simon@chesireattorneys.co.za",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "83 Albertina Sisulu Rd, Works@Market Building",
+      "addressLocality": "Johannesburg",
+      "addressRegion": "Gauteng",
+      "postalCode": "2110",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -26.2041,
+      "longitude": 28.0473
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }
+    ],
+    "areaServed": { "@type": "City", "name": "Johannesburg" },
+    "priceRange": "$$",
+    "founder": { "@type": "Person", "name": "Simon Chesire" },
+    "foundingDate": "2016",
+    "sameAs": [
+      "https://www.facebook.com/chesireat/",
+      "https://www.linkedin.com/in/chesire-attorneys-ab20aa121/",
+      "https://www.instagram.com/chesireattorneys/"
+    ]
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <HeroSlider />
       <HeroStats />
 
@@ -89,7 +127,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {[
               { img: "/images/team1.jpg", name: "Simon Chesire", role: "Director & Founder", areas: "Immigration, Civil Litigation, Criminal Law" },
-              { img: "/images/Respina.png", name: "Respina Tafirei", role: "Professional Assistant", areas: "Family Law, Estates, Labour Law" },
+              { img: "/images/Respina.png", name: "Respina Tafirei", role: "Professional Assistant", areas: "" },
             ].map((m, i) => (
               <div
                 key={i}

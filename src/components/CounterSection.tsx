@@ -33,7 +33,7 @@ function Counter({ end, suffix, label, icon: Icon }: typeof stats[0]) {
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) { setActive(true); obs.disconnect(); }
-    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    }, { threshold: 0 });
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);

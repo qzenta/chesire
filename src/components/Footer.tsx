@@ -84,12 +84,12 @@ export default function Footer() {
             </li>
             <li className="flex gap-2.5">
               <Phone size={15} className="text-[#C9A84C] shrink-0" />
-              <a href="tel:0834078095" className="hover:text-[#C9A84C] transition-colors">082 407 8095</a>
+              <a href="tel:0824078095" className="hover:text-[#C9A84C] transition-colors">082 407 8095</a>
             </li>
             <li className="flex gap-2.5">
               <Mail size={15} className="text-[#C9A84C] shrink-0" />
-              <a href="mailto:info@chesireattorneys.co.za" className="hover:text-[#C9A84C] transition-colors break-all">
-                info@chesireattorneys.co.za
+              <a href="mailto:Simon@chesireattorneys.co.za" className="hover:text-[#C9A84C] transition-colors break-all">
+                Simon@chesireattorneys.co.za
               </a>
             </li>
             <li>
