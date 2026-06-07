@@ -1,7 +1,19 @@
 "use client";
 import { useState } from "react";
-import { MapPin, Phone, Mail, MessageCircle, Calendar, Shield } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { MapPin, Phone, Mail, MessageCircle, Calendar, Shield, MapPinned } from "lucide-react";
 import PageHero from "@/components/PageHero";
+
+const locationNames: Record<string, string> = {
+  boksburg: "Boksburg",
+  germiston: "Germiston",
+  edenvale: "Edenvale",
+  northcliff: "Northcliff",
+  ferndale: "Ferndale",
+  cresta: "Cresta",
+  alberton: "Alberton",
+  "the-glen": "The Glen",
+};
 
 const areaOptions = [
   "Immigration Law",
@@ -16,6 +28,10 @@ const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "27824078095";
 const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/chesireattorneys";
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
+  const fromLocation = searchParams.get("from") ?? "";
+  const locationLabel = locationNames[fromLocation] ?? "";
+
   const [form, setForm] = useState({ name: "", email: "", phone: "", area: "", message: "" });
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -46,7 +62,16 @@ export default function ContactPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Contact form */}
         <div className="lg:col-span-2">
-          <h2 className="font-[var(--font-playfair)] text-2xl font-bold text-[#1A2E52] mb-6">Send Us a Message</h2>
+          <h2 className="font-[var(--font-playfair)] text-2xl font-bold text-[#1A2E52] mb-4">Send Us a Message</h2>
+
+          {locationLabel && (
+            <div className="flex items-center gap-3 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-lg px-4 py-3 mb-6">
+              <MapPinned size={18} className="text-[#C9A84C] shrink-0" />
+              <p className="text-sm text-[#1A2E52] font-medium">
+                Enquiring from <strong>{locationLabel}</strong> — complete the form below and we&apos;ll be in touch within one business day.
+              </p>
+            </div>
+          )}
 
           {status === "success" ? (
             <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
@@ -168,8 +193,8 @@ export default function ContactPage() {
               </li>
               <li className="flex gap-3">
                 <Mail size={18} className="text-[#C9A84C] shrink-0" />
-                <a href="mailto:info@chesireattorneys.co.za" className="hover:text-[#1A2E52]">
-                  info@chesireattorneys.co.za
+                <a href="mailto:Simon@chesireattorneys.co.za" className="hover:text-[#1A2E52]">
+                  Simon@chesireattorneys.co.za
                 </a>
               </li>
             </ul>

@@ -71,7 +71,7 @@ export default function LocationsPage() {
         <div className="max-w-3xl mx-auto px-4 text-center text-white">
           <Phone size={32} className="text-[#C9A84C] mx-auto mb-4" />
           <h2 className="font-[var(--font-playfair)] text-3xl font-bold mb-4">Not Sure How to Reach Us?</h2>
-          <p className="text-white/70 mb-8">Call or WhatsApp us on <a href="tel:0834078095" className="text-[#C9A84C] font-semibold">082 407 8095</a>, or use the booking form below.</p>
+          <p className="text-white/70 mb-8">Call or WhatsApp us on <a href="tel:0824078095" className="text-[#C9A84C] font-semibold">082 407 8095</a>, or use the booking form below.</p>
           <Link href="/contact" className="inline-block bg-[#C9A84C] hover:bg-[#b8963e] text-[#1A2E52] font-bold px-8 py-4 rounded transition-colors">
             Book a Consultation
           </Link>
