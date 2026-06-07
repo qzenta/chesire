@@ -17,7 +17,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero label="About Us" title="A Firm Built on Trust" subtitle="Chesire Attorneys — a Johannesburg boutique firm committed to accessible, client-centred legal services since our founding." image="/images/about-hero.jpg" />
+      <PageHero label="About Us" title="A Firm Built on Trust" subtitle="Chesire Attorneys — a Johannesburg boutique firm committed to accessible, client-centred legal services since our founding." image="/images/about-team.jpg" />
 
       {/* Firm story */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </div>
         <div className="rounded-2xl overflow-hidden h-96 shadow-lg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/about-hero.jpg" alt="Chesire Attorneys" className="w-full h-full object-cover" />
+          <img src="/images/about-firm.jpg" alt="Chesire Attorneys — Black-owned law firm" className="w-full h-full object-cover object-top" />
         </div>
       </section>
 
@@ -103,12 +103,18 @@ export default function AboutPage() {
 
       {/* Community */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-[var(--font-playfair)] text-3xl font-bold text-[#1A2E52] mb-6">Community Commitment</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">Chesire Attorneys has a long-standing commitment to the broader Johannesburg community. We are proud to serve immigrant and diaspora communities who often face unique and complex legal challenges navigating South African systems.</p>
-          <p className="text-gray-600 leading-relaxed mb-4">We operate on the <strong className="text-[#1A2E52]">&ldquo;Batho Pele&rdquo;</strong> principle — <em>people first</em>. Our firm supports charities and community initiatives, and we are committed to giving back to the communities we serve.</p>
-          <p className="text-gray-600 leading-relaxed">We believe access to quality legal advice should not depend on where you were born. Our team is here to help — with empathy, expertise and a genuine commitment to justice.</p>
-          <Link href="/services" className="inline-flex items-center gap-2 mt-8 text-[#C9A84C] font-semibold hover:underline">See how we can help you <ArrowRight size={16} /></Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="rounded-2xl overflow-hidden h-96 shadow-lg order-last lg:order-first">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/about-community.jpg" alt="Community commitment — Chesire Attorneys" className="w-full h-full object-cover object-top" />
+          </div>
+          <div>
+            <h2 className="font-[var(--font-playfair)] text-3xl font-bold text-[#1A2E52] mb-6">Community Commitment</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">Chesire Attorneys has a long-standing commitment to the broader Johannesburg community. We are proud to serve immigrant and diaspora communities who often face unique and complex legal challenges navigating South African systems.</p>
+            <p className="text-gray-600 leading-relaxed mb-4">We operate on the <strong className="text-[#1A2E52]">&ldquo;Batho Pele&rdquo;</strong> principle — <em>people first</em>. Our firm supports charities and community initiatives, and we are committed to giving back to the communities we serve.</p>
+            <p className="text-gray-600 leading-relaxed mb-8">We believe access to quality legal advice should not depend on where you were born. Our team is here to help — with empathy, expertise and a genuine commitment to justice.</p>
+            <Link href="/services" className="inline-flex items-center gap-2 text-[#C9A84C] font-semibold hover:underline">See how we can help you <ArrowRight size={16} /></Link>
+          </div>
         </div>
       </section>
     </>
