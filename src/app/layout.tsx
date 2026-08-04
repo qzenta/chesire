@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
+import MicrosoftClarity from "@/components/MicrosoftClarity";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -69,6 +70,7 @@ export default function RootLayout({
         </Script>
         {/* GTM noscript fallback */}
         <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style={{display:"none",visibility:"hidden"}} /></noscript>
+        <MicrosoftClarity />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
